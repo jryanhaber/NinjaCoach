@@ -1,0 +1,347 @@
+
+.header-content-inner{
+
+text-shadow: 0px 0px 3px #000, -1px -1px #000, 1px 1px #000;
+background-color: rgba(0,0,0,0.5);
+
+padding: 4%;
+}
+
+.header-content-inner-2{
+
+text-shadow: 0px 0px 3px #000, -1px -1px #000, 1px 1px #000;
+background-color: rgba(0,0,0,0.5);
+
+padding: 2%;
+}
+
+.style2{
+
+text-shadow: 0px 0px 3px #000, -1px -1px #000, 1px 1px #000;
+background-color: rgba(0,0,0,0.0);
+color:white;
+padding: 2%;
+}
+
+
+
+
+/*dropdown menu styling*/
+li{
+
+/*    display:inline-block;
+*/
+    margin: auto;       /* This is when the drop down box appears */
+    position: relative;
+    text-shadow: none;
+    font-family: "Open Sans","Helvetica Neue",Arial,sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+
+}
+
+/*remove after test*/
+
+/*style the lists*/
+ .ul-special {
+        text-align:center;
+ }
+
+/*style the dropdown menus*/
+.dropdown-menu{
+
+    position:relative;
+    float:none;
+    background-color: rgba(255, 255, 255, 0.57);
+    margin: 40px; 
+    margin-bottom: 20px; 
+}
+
+/*make hovers somewhat transparent*/
+
+tr:hover{
+
+    background-color: rgba(255, 255, 235, 0.27);
+
+
+}
+
+.form-control{
+
+    background-color:rgba(255, 255, 255, 0.33);
+    color: white;
+    font-weight: 550;
+    font-family: "Open Sans","Helvetica Neue",Arial,sans-serif;
+    font-size: 19px;
+}
+/*give a margin around buttons*/
+.btn{ margin: 10px;
+
+}
+
+
+/*second table model*/
+.table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th{
+
+   border-top: none; 
+}
+
+
+.row-faded-light{
+    background-color: rgba(255,255,255,.2);
+
+}
+
+.isp {
+
+
+            margin-right: 10px;
+        }
+
+
+.row-faded{
+    background-color: rgba(255,255,255,.3);
+
+}
+
+.row-faded-med{
+    background-color: rgba(255,255,255,.15);
+
+}
+.row-faded-med-inner:hover{
+
+background-color: rgba(255, 255, 255, 0.15);
+
+}
+
+.no-hover-effect:hover{
+
+background-color: rgba(255, 255, 255, 0);
+
+}
+
+.row-faded-full{
+    background-color: rgba(255,255,255,.03);
+
+}
+
+.table,.text-funky{
+
+font-size: 19px;
+text-shadow: 0px 0px 3px #000, -1px -1px #000, 1px 1px #000;
+font-weight: 800;
+
+font-family: "Open Sans","Helvetica Neue",Arial,sans-serif;
+}
+
+/*about section reduced padding to fit*/
+
+#about{
+
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+/*logos design*/
+
+.logos{
+
+    height: 10vw;
+    min-height: 50px;
+    min-width: 50px;
+    width: 10vw;
+    border-radius: 8px;
+    margin: -8px;    
+    padding:0px;
+
+}
+
+.logos-header{
+
+    height: 2vw;
+    min-height: 10px;
+    min-width: 60px;
+    width: 10vw;
+    border-radius: 8px;
+    margin: 0px;
+    padding:0px;
+
+}
+.formcell {
+vertical-align:middle !important;
+
+}
+
+
+/*sizing for the cell with the work role data in it*/
+.formcell{
+
+    font-size: 27px;
+    font-size: 3.3vmin;
+
+}
+
+.logos-header{
+
+    font-size: 23px;
+    font-size: 2.7vmin;
+
+}
+
+.roleCell {
+
+    font-size: 22px;
+    font-size: 2.8vmin;
+
+}
+
+
+/*circular images*/
+
+.circular {
+    
+    width: 24vw;
+    height: 24vw;
+    padding: 11%;
+    border-radius: 75px;
+    -webkit-border-radius: 75px;
+    -moz-border-radius: 75px;
+    border-radius: 24vw;
+    background: url(/img/jonathan.png) no-repeat;
+    }
+
+.circular img {
+/*    opacity: 0;
+*/  filter: alpha(opacity=0);
+    width: 24vw;
+    height: 24vw;
+    }
+
+/*circular images*/
+
+.circular-center {
+    
+    width: 24vw;
+    height: 24vw;
+    border-radius: 75px;
+    -webkit-border-radius: 75px;
+    -moz-border-radius: 75px;
+    border-radius: 24vw;
+    text-align: center;
+    background: url(/img/jonathan.png) no-repeat;
+    }
+
+.circular-center img {
+/*    opacity: 0;
+*/  filter: alpha(opacity=0);
+    width: 24vw;
+    height: 24vw;
+    }
+
+/*td{
+
+    padding: 0px;
+    margin: 0px;
+}*/
+
+.table > tbody > tr > td{
+
+
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+
+}
+
+
+.intro-text{
+
+font-weight:600;
+text-align:left;
+/*font-size: 40px;
+*/font-size: 1.4vw;
+
+}
+
+h2{
+
+font-weight:600;
+/*font-size:26px;"
+*/
+}
+
+
+h3{
+
+font-weight:600;
+/*font-size:23px;"
+*/
+}
+
+
+
+}
+header .header-content {
+    position: relative;
+    width: 100%;
+    padding-top: 6%;
+    padding-right: 1%;
+    padding-left: 1%;
+    padding-bottom: 6%;
+    text-align: center;
+}
+
+tbody, table{
+
+
+}
+
+.tr-tall  {
+
+    margin-top: 10px;
+    padding-bottom: 10px;
+
+
+}
+
+.form-control{
+
+    background-color: rgba(45, 101, 47, 0.3);
+}
+
+.input-group{
+
+    display: block;
+}
+select{
+
+    color: black;
+}
+
+@media only screen and (max-width: 420px) {
+
+   h2 { font-size: 22px !important ;}
+   h3 { font-size: 17px !important ;}
+   td { font-size: 17px !important ;}
+
+}
+
+@media only screen and (max-width: 320px) {
+
+   h2 { font-size: 18px !important ;}
+   h3 { font-size: 14px !important ;}
+   td { font-size: 14px !important ;}
+
+}
+
+
+
+header .header-content {
+    position: relative;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 6% !important;
+    padding-bottom: 2%;
+    text-align: center;

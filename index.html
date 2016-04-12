@@ -1,0 +1,2924 @@
+
+<!DOCTYPE html>
+
+
+<!--  <html manifest="demo.appcache"> experiment for app caching via http://www.w3schools.com/html/html5_app_cache.asp 
+-->
+<html>
+
+
+
+
+<!-- Note from the Author/Creator 
+
+It is an honor to have you notice this site!  
+
+It also serves as a creative outlet for my deep passion for the actualization of human potential, for which I am using applied integral theory to demonstrate, experientially, the mutually uplifting nature of what might otherwise be understood as disparate systems for accessing, uncovering and actualizing human potential. 
+
+I welcome feedback, collaboration, fresh ideas, or anything else you wish to share my friends. 
+
+Objectives I have outstanding for working with this code
+ - HTML Cloning/Templating; sort out the method I prefer and implement it
+ - Simple Databasing, Backend, Data retention (html5 local storage is all thats currently being used)
+
+
+
+
+-->
+
+
+
+
+
+<head>
+
+  <title >Integral Inquiry</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=.7">
+
+
+  <!-- *** local files for testing *** -->
+
+  <!-- load JQuery -->
+  <script src="jquery-1.11.2.js"></script>
+  <!-- load firebase Functions -->
+  <script src="NinjaFirebase.js"></script>     <!-- load overarching javascript functions -->
+  <script src="Ninja.js"></script>   
+  <!-- load controls for leverage modes -->
+  <script src="leverageControls.js"></script> 
+  <!-- load 2nd Person Inquiry functions  -->
+  <script src="ninja2ndPerson.js"></script>
+  <!-- load Angular  -->
+  <script src="angular.min.js"></script>
+  <!-- load Angular App -->
+  <div  class="viewZoneMain">
+  <!-- load appml (not being implemented yet) -->
+  <script src="appml.js"></script>
+  <!-- load keymaster (not being implemented yet) -->
+ <script src="keymaster.js"></script>
+ <!-- load bpopup library (not being implemented yet) -->
+  <script src="jquery.bpopup-0.11.0.min.js"></script>
+
+
+
+<!-- 
+||  There are 2 setups, one for dev and one for uploading... 
+============================================ ||
+
+ For the appropriate function, unblock the corresponding code...    
+
+-->
+
+
+
+
+<!-- 
+||  Dev (for development un-block this code)
+============================================ || -->
+
+<!-- load boostrap functions -->
+  <script src="bootstrap.min.js"></script>
+<!-- load with bootstrap theme css -->
+  <link rel="stylesheet" href="bootstrap-theme.min.css">
+<!-- overwrite with bootstrap basic -->
+  <link rel="stylesheet" href="bootstrap.min.css">   
+
+
+
+<!-- 
+|| If you dont have internet access, this link should not fire, because it may prevent offline a
+|| access.. but you need to sort out how to make it conditional... 
+============================================ || 
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"> -->
+
+
+<!-- 
+||  Uploading (for uploading, un-block this code)
+============================================ ||
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+  <script  src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> 
+ -->
+
+<!-- 
+|| Personal Stylesheet should overwrite all others, and thus must be
+|| positioned last, here:
+============================================ || -->
+
+<!-- load custom css -->
+  <link rel="stylesheet" href="NinjaStyle.css"  type="text/css">       
+
+
+
+
+<!-- 
+||  
+============================================ ||
+-->
+
+<!--   *** firebase files  -->
+  <script src='https://cdn.firebase.com/js/client/2.2.9/firebase.js'></script>
+
+
+      <!-- <script src="http://www.w3schools.com/appml/2.0.2/appml.js"></script> -->
+
+    <!-- *** hosted files to be activated for uploading *** -->
+
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"> 
+
+// <script src="bootstrap.min.js"></script>      
+  //<script src="Ninja.js"></script>        
+  //<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+ // <link href="NinjaStyle.css" rel="stylesheet" type="text/css">       
+ // <div ng-app="" class="viewZoneMain">
+
+-->
+
+
+</head>
+
+
+<!--
+// what does it do
+whos it for
+libraries used
+.. clearslide // see what is needed...
+google slides.. 
+-->
+
+
+
+
+<style>
+
+/* specialized graphics mode, turn on to activate*/
+
+.main9{
+
+    background-color: none;
+    background-image: none;}
+
+#main10{
+
+/*  position: fixed;
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  left: 0%;
+  right: 0%;
+  bottom: 0%;
+  top: 0%;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  vertical-align: middle;
+  
+  z-index: -100;
+
+*/
+
+}
+
+#main11{
+
+ /* left: 0%;
+  right: 0%;
+  top: 0px;
+  bottom: auto;*/
+  /*width: 100 vw;
+  height: 100 vh;*/
+
+}
+</style>
+
+
+
+
+
+
+
+<body ng-app="" id="body" class="container-fluid">
+
+
+<!-- Trigger the modal with a button -->
+<!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#personalLog">Open Modal</button>
+ -->
+<!-- Modal -->
+<div id="personalLog" class="modal fade" role="dialog">
+  <div class="modal-dialog logModalArea">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">My Log</h4>
+      </div>
+      <div class="modal-body">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+  <div id="main10">
+
+
+
+      <!-- <iframe id="main11" width="100%" height="110%" style=
+    "position:relative;" src='https://www.youtube.com/embed/sGyhrJ0q_uQ?Version=3&autoplay=0&loop=1&rel=0&playlist=sGyhrJ0q_uQ&controls=0&showinfo=0&modestbranding=1&enablejsapi=1'  frameborder="0" allowfullscreen="1"
+     ></iframe> -->
+
+  </div>
+
+
+  <div class="" id="wrapper" >
+
+
+
+
+
+</style>
+
+   <div class="panel-body main9" id="headerBar">
+
+
+<script>
+  
+</script>
+
+
+      <div class="center-block " class="customProfileActivator" id="title">   
+          
+        <tr>
+          <td>
+                      <button type="button" id="MIN" class="btn btn-lg inline btn-primary pull-left screenViewToggle" >  <b>≡</b> </button>
+
+          </td>
+          <td>
+                      <span id="titleMarker" class="center inline" style="color:grey;"
+                      >Integral Inquiry - Built for Firefox </span>
+
+                      
+<!-- @DEVMODE -->
+
+<!-- 
+          </td>
+                      <button type="button" id="logInTrigger" class="btn btn-lg btn-link inline pull-right " > Sign In </button>
+
+          <td> -->
+
+          </td>
+        </tr>
+
+
+
+     </div>
+
+    <noscript>Sorry, your browser does not support JavaScript!</noscript>
+
+
+  </div>
+</div>
+
+
+
+<div id="fullintro" class="collapse">
+
+
+
+
+  <div class ="jumbotron" id="jumbo2" style=" margin: 0px; padding:0px;" >
+
+    <!--  #Introduction -->
+
+    <div class="row viewZoneMain">
+      <div class="col-sm-8">
+
+
+        <h4> Introduction: </h4>
+        <div id="introb" class="panel-body intro" data-toggle="collapse" ><h2>Get an Introduction</h2> <p>Would you like a little introduction to this work?</p></div>
+        <h4> Design: </h4>
+        <div class="panel-body 2ndPersonMode " data-toggle="collapse" onclick="activate2ndPersonMode()" ><h2>2nd Person Inquiry</h2><p>If you are here for Shadow Work or other forms of 2nd Person Inquiry - start here</p></div>
+        <div class="panel-body decisionMode " onclick="activateDecisionMode()" ><h2>Decision Maker </h2><p>Explore how this tool can support you in transforming a difficult decision into an opportunity for deeper insight</p></div>
+      </div>
+
+      <div class="col-sm-4">
+        <div id="disqus_thread"></div>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div id="main" class="collapse viewZoneMain">
+  <div class ="jumbotron" id="jumbo3" style="background-color:rgba(255, 255, 255, 0.88)">
+
+    <!--  #BUTTON Menu Beginning -->
+
+    <div class="row viewZoneMain" id="mainrow" >
+      <div class="nm col-xs-12 col-sm-4 col-md-3 col-lg-3 collapse part viewZoneButtons" id="sidebar">
+        <div class="" id="myButtons" >
+          <div class="panel panel-default"  id="buttonpanel1">
+            <button class="btn btn-block experienceMenuButton mainButtons " id="buttonpanel"><p class="text-center"><b> Connect to your <br>Experience</p></b>
+            </button id="button panel heading end">
+            <container> 
+              <div class="btn-group-vertical btn-block">
+                <button type="button" class="btn btn-block btn-lg   sensationMenuButton experienceMenuItems allMainMenus" >Your <br>Sensations</button>
+                <div id="sensations" class="collapse allMainMenus sensationMenu">
+                  <div class="btn-group-vertical btn-block">
+
+                    <button class="btn btn-subMenu btn-lg btn-block " onclick="addButton('tension','Sensation')">tension</button>
+                    <button class="btn btn-subMenu btn-lg btn-block" onclick="addButton('relaxation','Sensation')">relaxation</button>
+                    <button class="btn btn-subMenu btn-lg btn-block" onclick="addButton('peace','Sensation')">peace</button>
+                    <button class="btn btn-subMenu btn-lg btn-block" onclick="addButton('goosebumps','Sensation')">goosebumps</button>
+                    <button class="btn btn-subMenu btn-lg btn-block" onclick="addButton('pain','Sensation')">pain</button>
+                    <button class="btn btn-subMenu btn-lg btn-block" onclick="addButton('contraction','Sensation')">contraction</button>
+                    <button class="btn btn-subMenu btn-lg btn-block" onclick="addButton('expansion','Sensation')">expansion</button>
+
+                  </div>
+                </div>
+
+                <button type="button" class="btn btn-block btn-lg  impulseMenuButton allMainMenus experienceMenuItems" >Your <br>Impulses</button>
+                <div id="impulses" class="collapse impulseMenu allMainMenus">
+                  <div class="btn-group-vertical btn-block">
+
+                    <button class="btn btn-subMenu btn-lg btn-block" onclick="addButton('collapse','Impulse')">collapse</button>
+                    <button class="btn btn-subMenu btn-lg btn-block" onclick="addButton('agression','Impulse')">aggression</button>
+                    <button class="btn btn-subMenu btn-lg btn-block" onclick="addButton('numbness','Impulse')">numbness</button>
+                  </div>
+                </div>
+
+                <button type="button" class="btn btn-lg btn-block  longingsMenuButton allMainMenus experienceMenuItems" >Your <br>Longings</button>
+
+
+
+
+
+
+                <div id="text" class="collapse longingsMenu allMainMenus">
+                  <div class="btn-group-vertical btn-block">
+
+                    <h6 class="text-center" class="small"> Via the <br>Sedona Method: </h6>
+
+                    <!-- These are the #Sedona Method Longing Buttons -->
+
+                    <button class="btn btn-subMenu btn-lg btn-block" onclick="addButton('Wanting Control','Longing')">Wanting Control</button>
+                    <button class="btn btn-subMenu btn-lg btn-block" onclick="addButton('Wanting Security','Longing')">Wanting Security</button>  
+                    <button class="btn btn-subMenu btn-lg btn-block" onclick="addButton('Wanting Approval','Longing')">Wanting Approval</button>
+                    <button class="btn btn-subMenu btn-lg btn-block" onclick="addButton('Wanting Separation','Longing')">Wanting<br> Seperation</button>
+                    <button class="btn btn-subMenu btn-lg btn-block" onclick="addButton('Wanting Union','Longing')">Wanting Union</button>
+
+
+                    <h6 class="text-center" class="small"> Via the<br> Enneagram: </h6>
+
+
+                    <button class="btn btn-subMenu btn-lg btn-block" onclick="addButton('Wanting Perfection','Longing')">Wanting <br>Perfection</button>
+                    <button class="btn btn-subMenu btn-lg btn-block" onclick="addButton('Wanting to be Helpful','Longing')">Wanting to <br>be Helpful</button>
+                    <button class="btn btn-subMenu btn-lg btn-block" onclick="addButton('Wanting to be Valuable','Longing')">Wanting to <br>be Valuable</button>
+                    <button class="btn btn-subMenu btn-lg btn-block" onclick="addButton('Wanting to be Precious','Longing')">Wanting to <br>be Precious</button>
+                    <button class="btn btn-subMenu btn-lg btn-block" onclick="addButton('Wanting Understanding','Longing')">Wanting <br>Understanding</button>
+                    <button class="btn btn-subMenu btn-lg btn-block" onclick="addButton('Wanting to be the Best','Longing')">Wanting to <br>be the Best</button>
+                    <button class="btn btn-subMenu btn-lg btn-block" onclick="addButton('Wanting Freedom','Longing')">Wanting Freedom</button>
+                    <button class="btn btn-subMenu btn-lg btn-block" onclick="addButton('Wanting Safety','Longing')">Wanting Safety</button>
+                    <button class="btn btn-subMenu btn-lg btn-block" onclick="addButton('Wanting Peace','Longing')">Wanting Peace</button>
+
+
+                  </div>
+                </div>
+
+                <button type="button" class="btn btn-block btn-lg emotionsMenuButton allMainMenus experienceMenuItems">Your <br>Emotions</button>
+
+                <div class="collapse emotionsMenu allMainMenus">
+
+                  <div class="btn-group-vertical btn-block">
+
+
+                    <!--.experience buttons..-->
+
+                    <button class="btn btn-subMenu btn-lg btn-block" onclick="addButton('Joy','Emotion')">Joy</button>
+                    <button class="btn btn-subMenu btn-lg btn-block" onclick="addButton('Freedom','Emotion')">Freedom</button>
+                    <button class="btn btn-subMenu btn-lg btn-block" onclick="addButton('Inspiration','Emotion')">Inspiration</button>
+                    <button class="btn btn-subMenu btn-lg btn-block" onclick="addButton('Peace','Emotion')">Peace</button>
+                    <button class="btn btn-subMenu btn-lg btn-block" onclick="addButton('Resonant','Emotion')">Resonant</button>
+                    <button class="btn btn-subMenu btn-lg btn-block" onclick="addButton('Engaged','Emotion')">Engaged</button>
+                    <button class="btn btn-subMenu btn-lg btn-block" onclick="addButton('Curiosity','Emotion')">Curiosity</button>
+                    <button class="btn btn-subMenu btn-lg btn-block" onclick="addButton('Excited','Emotion')">Excited</button>
+                    <button class="btn btn-subMenu btn-lg btn-block" onclick="addButton('Intrigue','Emotion')">Intrigue</button>
+                    <button class="btn btn-subMenu btn-lg btn-block" onclick="addButton('Happy','Emotion')">Happy</button>
+                    <button class="btn btn-subMenu btn-lg btn-block" onclick="addButton('Calm','Emotion')">Calm</button>
+                    <button class="btn btn-subMenu btn-lg btn-block" onclick="addButton('Afraid','Emotion')">Afraid</button>
+                    <button class="btn btn-subMenu btn-lg btn-block" onclick="addButton('Sad','Emotion')">Sad</button>
+                    <button class="btn btn-subMenu btn-lg btn-block" onclick="addButton('Ashamed','Emotion')">Ashamed</button>
+                    <button class="btn btn-subMenu btn-lg btn-block" onclick="addButton('Confusion','Emotion')">Confusion</button>
+                    <button class="btn btn-subMenu btn-lg btn-block" onclick="addButton('Embarrassment','Emotion')">Embarrassment</button>
+                    <button class="btn btn-subMenu btn-lg btn-block" onclick="addButton('Annoyance','Emotion')">Annoyance</button>
+                    <button class="btn btn-subMenu btn-lg btn-block" onclick="addButton('Frustration','Emotion')">Frustration</button>
+                    <button class="btn btn-subMenu btn-lg btn-block" onclick="addButton('Anger','Emotion')">Anger</button>
+                    <button class="btn btn-subMenu btn-lg btn-block" onclick="addButton('Apathy','Emotion')">Apathy</button>
+                    <button class="btn btn-subMenu btn-lg btn-block" onclick="addButton('Helplessness','Emotion')">Helplessness</button>
+                    <button class="btn btn-subMenu btn-lg btn-block" onclick="addButton('Futility','Emotion')">Futility</button>
+
+
+
+
+                  </div>
+                </div>
+
+
+
+              <!--  #PROCESSES - BEGIN Processes Section -->
+              <!-- @DEVMODE
+             -->
+<!-- 
+            <div>
+
+              <button type="button" class="btn btn-block btn-lg processMenuButton mainButtons"><b>Processes</b></button>
+
+              <div id="Processes" class="collapse processMenu allMainMenus">
+                <div class="btn-group-vertical btn-block">
+
+
+                  <button type="button" class="btn btn-block btn-lg btn-subMenu add2ndPersonMode coachingMethodologies">2nd Person Inquiry <br> Exploration</button>
+                  <button type="button" class="btn btn-block btn-lg btn-subMenu addDecisionMode coachingMethodologies">Decision Maker <br></button>
+                  <button type="button" class="btn btn-block btn-lg btn-subMenu coachingMethodologies"  data-toggle="collapse" data-target="#SMRC1R">Sedona Method <br>Resistance Clearing</button>
+                  <button type="button" class="btn btn-block btn-lg btn-subMenu coachingMethodologies"  data-toggle="collapse" data-target="#IMNH" onclick='setText("I" + " " + "want" + " " + "to" + " ")'>Immunity to Change <br> Coaching Method</button>
+                  <button type="button" class="btn btn-block btn-lg btn-subMenu coachingMethodologies"  data-toggle="collapse" data-target="#LoopingIntro">Avatar <br>Looping</button>
+                  <button type="button" class="btn btn-block btn-lg btn-subMenu coachingMethodologies"  data-toggle="collapse" data-target="#WF1">MKP <br>Wanting For</button>
+                  <button type="button" class="btn btn-block btn-lg btn-subMenu coachingMethodologies"  data-toggle="collapse" data-target="#WelcomingChallenge">Welcoming Challenge<br>Process</button>
+
+                </div>
+
+                </container>
+            </div>
+          </div>
+ -->
+
+                  <button type="button" style="display:none"class="btn btn-block btn-lg btn-primary add2ndPersonMode accessMethod coachingMethodologies">2nd Person Inquiry <br> Exploration</button>
+
+
+          <!--  #PROCESSES - END Processes Section -->
+
+
+
+          <div>
+
+            <button type="button" class="btn btn-block btn-lg btn-primary  customizerMenuButton mainButtons inDevelopment collapse" style="display:none"><b>Create a 2nd <br>Person Practice</b></button>
+
+            <div id="customizer" class="collapse customMenu allMainMenus" style="display:none">
+              <div class="btn-group-vertical btn-block">
+
+                <!-- All custom 2nd person inquiries go here -->
+                <button class="btn btn-subMenu btn-lg btn-block" onclick="addPractice('Victim','Integration')">Victim</button>
+                <button class="btn btn-subMenu btn-lg btn-block" onclick="addPractice('Villian','Integration')">Villian</button>
+                <button class="btn btn-subMenu btn-lg btn-block"onclick="addPractice('Hero','Integration')">Hero</button>
+                <button class="btn btn-subMenu btn-lg btn-block"onclick="addPractice('Inner Drill Seargent','Integration')">Inner Drill Seargent</button>
+                <button class="btn btn-subMenu btn-lg btn-block"onclick="addPractice('Council of all Mentor Beings','Integration')">Council of all mentor Beings</button>
+                <button class="btn btn-subMenu btn-lg btn-block"onclick="addPractice('Voice of the ferocity of my Soul','Integration')">Voice of the ferocity of my soul</button>
+                <button class="btn btn-subMenu btn-lg btn-block"onclick="addPractice('Voice of my future partner','Integration')">Voice of my future partner</button>
+                <button class="btn btn-subMenu btn-lg btn-block"onclick="addPractice('Voice of my inner self care architect','Integration')">Voice of my Inner Self Care Architect</button>
+                <button class="btn btn-subMenu btn-lg btn-block"onclick="addPractice('voice of jealousy','Integration')">Voice of jealousy</button>
+                <button class="btn btn-subMenu btn-lg btn-block"onclick="addPractice('voice of my emotional state','Integration')">Voice of my emotional state</button>
+                <button class="btn btn-subMenu btn-lg btn-block"onclick="addPractice('voice of masculine prana','Integration')">Voice of masculine prana</button>
+                <button class="btn btn-subMenu btn-lg btn-block"onclick="addPractice('voice of the infinite','Integration')">Voice of the infinite</button>
+                <button class="btn btn-subMenu btn-lg btn-block"onclick="addPractice('voice of the free functioning, fully integrated self','Integration')">Voice of the free functioning, fully integrated self</button>
+
+
+              </div>
+
+              <div id="SM" class="collapse">
+                <button type="button" class="btn btn-block btn-lg btn-subMenu"  data-toggle="collapse" data-target="#SMC1">For Making Decisions</button> 
+              </container>
+            </div>
+          </div>
+        </div>
+
+        <div>
+
+
+        </div>
+
+
+        <div>
+
+          <button type="button" class="btn btn-block btn-lg  logMenuButton mainButtons"><b>Add To <br> Your Log</b></button>
+
+          <div class="collapse logMenu allMainMenus">
+            <div class="btn-group-vertical btn-block">
+
+              <!-- All custom 2nd person inquiries go here -->
+              <button class="btn btn-subMenu btn-lg btn-block" onclick="logSomething('','Inspiration')">Inspiration</button>
+              <button class="btn btn-subMenu btn-lg btn-block" onclick="logSomething('','Aspiration')">Aspiration</button>
+              <button class="btn btn-subMenu btn-lg btn-block" onclick="logSomething('','Appreciation')">Appreciation</button>
+              <button class="btn btn-subMenu btn-lg btn-block" onclick="logSomething('','Inquiry')">Inquiry</button>
+              <button class="btn btn-subMenu btn-lg btn-block" onclick="logSomething('','Insight')">Insight</button>
+              <button class="btn btn-subMenu btn-lg btn-block" onclick="logSomething('','Goal')">Goal</button>
+              <button class="btn btn-subMenu btn-lg btn-block" onclick="logSomething('','Habit')">Habit</button>
+              <button class="btn btn-subMenu btn-lg btn-block" onclick="logSomething('','Challenge')">Challenge</button>
+              <button class="btn btn-subMenu btn-lg btn-block" onclick="logSomething('','Decision')">Decision</button>
+              <button class="btn btn-subMenu btn-lg btn-block" onclick="logSomething('','Projection')">Projection</button>
+              <button class="btn btn-subMenu btn-lg btn-block" onclick="logSomething('','Journal')">Journal Entry</button>
+              <button class="btn btn-subMenu btn-lg btn-block" onclick="logSomething('','Practice')">Practice</button>
+              <button class="btn btn-subMenu btn-lg btn-block" onclick="logSomething('','Person')">Person</button>
+
+
+
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+      </div>
+
+
+    </div>  
+
+  </div id="button panel end">
+  <!--  #Menu End -->
+
+
+  <div>
+
+
+    <div class="nm col-lg-12 container-fluid viewZoneMain2 "   id="mainJournal">
+
+      <div id="journal3" >
+
+       
+
+
+            <div class="relatingText2">
+              <!--Noticing -->   
+              <div id="inquiriesView" class="collapse panel-body">
+                <div class="tinyHeader">
+                  <button class="btn btn-link btn-sm pull-right coachingStyleToggle ">Options</button>
+                  <button class="btn btn-link btn-sm pull-right coachingStyleToPresence coachingStyles ">Presence</button>
+                  <button class="btn btn-link btn-sm pull-right coachingStyleToInquiry coachingStyles ">Inquiry</button>
+                </div>
+                <div id='newsPanel' class='relatingText2'/>
+                
+              </div>
+
+              <div id="NI" class="collapse relatingText2">
+                <p> Allow yourself to take in the full range of your immediate experience and simply notice what it is that you notice...</p> 
+              </div>
+              <div id="RI" class="collapse relatingText2">
+                <p> Let yourself relax into the qualities and textures of this moment, of what it is like to be you... </p>
+              </div>
+
+              <div id="WI" class="collapse relatingText2">
+                <p> Let yourself 'open your arms wide' to this moment as though you are opening your front door fully to let it be what it is... </p>
+              </div>
+
+              <div id="LI" class="collapse relatingText2">
+                <p> Let yourself listen, with your whole body as an instrument, to the qualities and textures of this moment as it is... </p>
+              </div>
+
+              <div id="II" class="collapse relatingText2">
+                <p> Let yourself form a question to explore in this moment.  Let yourself be curious, wonderous about what is to come. </p>
+              </div>
+
+              <div id="BI" class="collapse relatingText2">
+                <p> What is it like being with this moment? </p>
+
+              </div>
+              <!--Relaxing -->
+              <!--Welcoming -->
+              <!--Listening -->
+
+
+              <!--#These are the listening pieces of guidance  -->
+
+              <!--The Movement Within  -->
+              <div id="LTMW" class="collapse relatingText2">
+                <p> 
+                  Let yourself listen in to the vast fields of information arising, moving and organically flowing through your inner world. </p> 
+                  <p>Turn your attention within and notice how your inner world becomes accentuated with your attention. 
+                  </p> 
+                </div>                    
+
+                <!--The Stillness Within  -->
+                <div id="LSTW" class="collapse relatingText2">
+                  <p> 
+                    Let yourself notice the quality of your listening.  Soften into this.
+                  </p> 
+                </div>
+
+                <!-- That which is emerging in this moment -->
+                <div id="LEMM" class="collapse relatingText2">
+                  <p> 
+                    Let yourself listen for that which is emerging, organically, of its own accord, in this moment.  
+                  </p> 
+                </div>
+
+                <!-- Who I am Being right now -->
+                <div id="LBEI" class="collapse relatingText2">
+                  <p> 
+                    Let yourself listen to the qualities of your own being.  Listen in on what its like being you. 
+                  </p> 
+                </div>
+
+                <!-- Who I am Becoming in this moment -->
+                <div id="LBEC" class="collapse relatingText2">
+                  <p> 
+                    Let yourself listen in on the process of your own organic unfoldment... your emergence as a seed cracking in the coming rains.  
+                  </p> 
+                </div>                   
+
+                <!-- My Unique Gift for Others -->
+                <div id="LUGO" class="collapse relatingText2">
+                  <p> 
+                    Let yourself listen to the qualities of your own gift for others.  Listen to the vast fields of information swirling within and around you for indicators of what you are uniquely poised to offer others, the world and those to come. 
+                  </p> 
+                </div>
+
+                <!-- My Sense of Purpose/Calling -->
+                <div id="LPUR" class="collapse relatingText2">
+                  <p> 
+                    Let yourself listen for a sense of your own unique calling in this life. 
+                  </p> 
+                </div>
+
+                <!-- My Sense of Integrity -->
+                <div id="LINT" class="collapse relatingText2">
+                  <p> 
+                    Listen into the degree to which you are in resonance, in integrity, in coherence with the vast field of information available to you about your being and what you are becoming. 
+                  </p> 
+                </div>
+
+
+                <!--#These are the inquiry pieces of guidance  -->
+                <!--The Movement Within  -->
+                <div id="TMW" class="collapse relatingText2">
+                  <p> 
+                    Allow yourself to inquire into that which is moving and changing within. 
+                  </p> 
+                  <p>What question would you ask yourself about this right now?</p>
+                </div>                    
+
+                <!--The Stillness Within  -->
+                <div id="STW" class="collapse relatingText2">
+                  <p> 
+                    Turn your curiosity and open-mind towards that which is still within.  Allow yourself to inquire into the quality of your listening.
+                  </p> 
+                </div>
+
+                <!-- That which is emerging in this moment -->
+                <div id="EMM" class="collapse relatingText2">
+                  <p> 
+                    Allow your attention to include that which is emerging now.  The organic novelty arising in your awareness, both within and around you. 
+                  </p> 
+                </div>
+
+                <!-- Who I am Being right now -->
+                <div id="BEI" class="collapse relatingText2">
+                  <p> 
+                    Allow yourself to take in the vastness and simplicity of who you are being in this moment, and offer yourself an opportunity to ask a question about this. 
+                  </p> 
+                </div>
+
+                <!-- Who I am Becoming in this moment -->
+                <div id="BEC" class="collapse relatingText2">
+                  <p> 
+                    Bring your attention to who you are becoming.  Allow yourself either to feel into the chrysalis that you are, or to look back on this moment from your death bed and to take in where you are in the context of who/what you are becoming. 
+                  </p> 
+                </div>                   
+
+                <!-- My Unique Gift for Others -->
+                <div id="UGO" class="collapse relatingText2">
+                  <p> 
+                    Allow yourself to feel into the unique gift you hold for yourself, for others, for the world.  Feel into this... that gift you hold and are growing within that is uniquely your medicine for those alive today and those to come. 
+                  </p> 
+                </div>
+
+                <!-- My Sense of Purpose/Calling -->
+                <div id="PUR" class="collapse relatingText2">
+                  <p> 
+                    Allow yourself to inquire into your sense of calling, of purpose, of function in service to the larger systems of life you are embedded wihtin and participitating with.  
+                  </p> 
+                </div>
+
+                <!-- My Sense of Integrity -->
+                <div id="INT" class="collapse relatingText2">
+                  <p> 
+                    Feel into the degree to which you are in resonance, in integrity, in coherence with the vast field of information available to you about your being and what you are becoming.  Allow yourself to inquire into this. 
+                  </p> 
+                </div>
+              </div>
+
+
+
+              <div>
+                <div>
+
+
+
+                 <div id="customProfile1" class="panel panel-default collapse customProfile">
+                  <div class="panel-default panel-body">
+
+                    <button type="button" class="btn btn-sm btn-default pull-right hideThis2nd" title="Done">X </button>
+                    <button type="button" class="btn btn-sm btn-default glyphicon glyphicon-chevron-down pull-right" data-toggle="collapse" data-target="#myPractice" title="Minimize"> </button>
+                    <button type="button" class="btn btn-sm btn-default glyphicon glyphicon-info-sign pull-right " title="Info" data-toggle="collapse" data-target="#customPracticeInfo"> </button> <h3> Custom Integral Life Practice <p> (an example)<p><h3>
+                    <div id="customPracticeInfo" class="collapse">
+                      <p> This is an example of where the development of this App is going in terms of what you will be able to build very quickly for yourself.</p>
+
+
+                    </div>
+                  </div>
+
+                  <div id="myPractice" class="collapse">
+                    
+
+
+                    <div class="panel panel-default journal">
+                      <div class="panel-body">
+                        <button type="button" class="btn btn-md  btn-default glyphicon glyphicon-chevron-down pull-right"   data-toggle="collapse" data-target="#customJournal"></button>
+
+                        <p><b>Take notes for yourself on this</b></p>
+                      </div>
+
+                      <div class="panel-body" id="jb" class="collapse">
+
+                       <div id="customJournal" class="viewZone panel-body viewZone collapse-in" >
+
+                       </div>
+
+
+
+                       <textarea class="form-control input-lg" autocomplete="off" type="text" rows="3" id="userInputCustom" ng-model="name"></textarea>
+
+
+                       <Button id="addToCustomJournal" type="submit" class="btn btn-subMenu btn-sm" onclick='changeTextComment7("userInputCustom","customJournal", "none")'>Add this!</Button>
+                     </div>
+
+                     <!-- OLD FUNCTION changeTextComment() -->
+
+
+                     <p></p>
+
+                   </div>
+
+                 </div>
+
+
+               </div>
+
+
+
+
+
+               <!-- Inquiry Zone #I - Under construction -->
+
+               <div id="inquiryMode" class="collapse panel">
+
+                <div class="panel-body"  >
+                  <p> My Inquiries <p>
+
+                    <ul class="list-group" id='inquiries'>
+
+                    </ul>
+
+                    <button type="button" class="btn btn-md btn-default glyphicon glyphicon-plus pull-right newInquiry"></button>
+                    <button type="button"  class="btn btn-md btn-default toggleInquiryMode pull-right" data-toggle="collapse" data-target="inquiryMode">X</button>
+
+                  </div>
+                </div>
+
+
+                <!-- End Inquiry Zone  -->
+
+
+
+
+
+
+
+
+
+        <!--# Inquiry                   --> 
+
+        <!--  # Immunity to Change Coaching Method Inquiries -->
+
+
+
+        <div id="IMNH" class="collapse">
+          <div class="panel panel-default">
+            <div class="panel-body"><h4>The Immunity to Change Coaching Method</h4>
+            </div>
+            <div class="panel-body">    
+              <p> This Coaching Method is designed to help uncover our "Immunity to Change;" what keeps us doing the same things when we want to make a positive change. </p> 
+              <p>What is the new behavior, pattern, or habit you want to start doing?</p>
+              <button type="button" class="btn btn-sm  btn-info glyphicon glyphicon-chevron-right pull-right"    data-toggle="collapse" data-target="#IMNH, #WHI" onclick='setText("Instead" + " " + "I" + " " + "Am" + " ")'></button>
+            </div>
+          </div>
+        </div>
+
+        <div id="WHI" class="collapse">
+          <div class="panel panel-default">
+            <div class="panel-body"><h4>The Immunity to Change Coaching Method</h4>
+            </div>
+            <div class="panel-body">        <p> What are you doing instead?</p> 
+              <button type="button" class="btn btn-sm  btn-info glyphicon glyphicon-chevron-right pull-right"    data-toggle="collapse" data-target="#WHI, #ICC" onclick='setText("I" + " " + "notice" + " ")'></button>
+              <button type="button" class="btn btn-sm btn-default glyphicon glyphicon-chevron-left pull-left " data-toggle="collapse" data-target="#WHI, #IMNH"></button>
+            </div>
+          </div>
+        </div>
+
+        <div id="ICC" class="collapse">
+          <div class="panel panel-default">
+            <div class="panel-body"><h4>The Immunity to Change Coaching Method</h4>
+            </div>
+            <div class="panel-body">        <p> What would it feel like to do the new behavior?</p> 
+              <button type="button" class="btn btn-sm  btn-info glyphicon glyphicon-chevron-right pull-right"    data-toggle="collapse" data-target="#ICC, #ICCC"></button>
+              <button type="button" class="btn btn-sm btn-default glyphicon glyphicon-chevron-left pull-left " data-toggle="collapse" data-target="#ICC, #WHI"></button>
+            </div>
+          </div>
+        </div>
+
+        <div id="ICCC" class="collapse">
+          <div class="panel panel-default">
+            <div class="panel-body"><h4>The Immunity to Change Coaching Method</h4>
+            </div>
+            <div class="panel-body">        <p> Notice what happens being with this question</p> 
+              <p>See if you can identify any competing commitments within... </p>
+              <button type="button" class="btn btn-sm  btn-info glyphicon glyphicon-chevron-right pull-right"    data-toggle="collapse" data-target="#ICCC, #IMGF"></button>
+              <button type="button" class="btn btn-sm btn-default glyphicon glyphicon-chevron-left pull-left " data-toggle="collapse" data-target="#ICCC, #ICC"></button>
+            </div>
+          </div>
+        </div>
+
+        <div id="IMGF" class="collapse">
+          <div class="panel panel-default">
+            <div class="panel-body"><h4>The Immunity to Change Coaching Method</h4>
+            </div>
+            <div class="panel-body">        <p>Going Forward</p> 
+             Check out Robert Kegan's videos online for more. 
+             <button type="button" class="btn btn-sm  btn-info pull-right"    data-toggle="collapse" data-target="#IMGF">X</button>
+           </div>
+         </div>
+       </div>
+
+
+     </div>
+
+     <!--  END Immunity to Change Coaching Method -->
+
+
+      <!--  END Immunity to Change Coaching Method
+      ============================================= -->
+
+
+
+      <!--   Custom 2nd person practice 
+      ============================================= -->
+     <div  class="collapse chomperMain">
+       <div class="panel-body-header focus" >
+
+
+          <b> Custom 2nd Person Practice <b>
+
+          <button class="btn btn-sm btn-default  pull-right toggleCustomBody" title="Hide/Show this">-</button> 
+          <button class="btn btn-sm btn-default pull-right hideTheChomper" title="Put this Away">x</button>
+        </div>
+      </div>
+
+
+        <div id="initialPracticeDestination">
+        </div>
+
+
+<!-- log in area -->
+
+
+        <div style="display:none" id="logInArea">
+
+
+          <span style="text-align:center;"class="center inline"> Sign In Here <span>
+          <br>
+        <label for="login-email">Email Address</label>
+         <input name="email" type="text" id="login-email" tabindex="1" class="form-control input-lg">
+
+          <label for="login-password">Password</label>
+         <input name="password" type="text" id="login-password" tabindex="1" class="form-control input-lg">
+
+  <br>
+       <button class="btn btn-block btn-lg btn-primary" id="22"> Sign In</button>  
+<br>
+
+      <button class="btn btn-block btn-lg btn-default" id="intiateRegistration"> Create New Account</button>
+
+         
+        </div>
+
+
+      <div class="chomper">
+       <div class="panel-body-header focus" id="modeBar">
+
+
+        <b class='2ndTitle'> My Life <b>
+
+          <button class="btn btn-sm btn-default  pull-right toggleLogBody" title="Hide/Show this">-</button> 
+          <button class="btn btn-sm btn-default  pull-right showLogItems" title="Show all of these">👀</button> 
+          <button class="btn btn-sm btn-info pull-right addLogItem" id="addLogShortcutButton" onclick="logSomething('','Goal')" title="Add New Goal">Add New Goal</button> 
+
+          <button class="btn btn-link btn-sm pull-right logModeToggle ">Leverage</button>
+          <button class="btn btn-link btn-sm pull-right logModeToggle2 ">Perspectives</button>
+          <button class="btn btn-link btn-sm pull-right" data-toggle="modal" data-target="#personalLog">Log</button>
+
+       
+          <br> 
+
+          <button style="display:none" class="btn btn-link btn-sm pull-right logModes commitmentIntegrityTrigger">Commitment to <br>Integrity</button>
+          <button style="display:none" class="btn btn-link btn-sm pull-right logModes integrityAimTrigger">Integrity w/<br> my Aim</button>
+          <button style="display:none" class="btn btn-link btn-sm pull-right logModes PriorityTrigger">Importance <br>to me</button>
+          <button style="display:none" class="btn btn-link btn-sm pull-right logModes IntegrityTrigger">Coherence w/<br> my Values</button>
+
+          <button style="display:none" class="btn btn-link btn-sm logTrigger InspirationTrigger">Inspirations</button>
+          <button style="display:none" class="btn btn-link btn-sm logTrigger AspirationTrigger">Aspirations</button>
+          <button style="display:none" class="btn btn-link btn-sm logTrigger AppreciationTrigger">Appreciation</button>
+          <button style="display:none" class="btn btn-link btn-sm logTrigger InquiryTrigger">Inquiries</button>
+          <button style="display:none" class="btn btn-link btn-sm logTrigger InsightTrigger">Insights</button>
+          <button style="display:none" class="btn btn-link btn-sm logTrigger GoalTrigger">Goals</button>
+          <button style="display:none" class="btn btn-link btn-sm logTrigger HabitTrigger">Habits</button>
+          <button style="display:none" class="btn btn-link btn-sm logTrigger ChallengeTrigger">Challenges</button>
+          <button style="display:none" class="btn btn-link btn-sm logTrigger DecisionTrigger">Decisions</button>
+          <button style="display:none" class="btn btn-link btn-sm logTrigger ProjectionTrigger">Projections</button>
+          <button style="display:none" class="btn btn-link btn-sm logTrigger JournalTrigger">Journal</button>
+          <button style="display:none" class="btn btn-link btn-sm logTrigger TodayTrigger">Today</button>
+          <button style="display:none" class="btn btn-link btn-sm logTrigger PersonTrigger">People</button>
+          <button style="display:none" class="btn btn-link btn-sm logTrigger PracticeTrigger">Practice</button>
+          <button style="display:none" class="btn btn-link btn-sm logTrigger ArchiveTrigger">Archive</button>
+          <button style="display:none" class="btn btn-link btn-sm logTrigger NextStepTrigger">Next Step</button>
+          <button style="display:none" class="btn btn-link btn-sm logTrigger TodayNextStepTrigger">Next Step's for Today</button>
+          <button style="display:none" class="btn btn-link btn-sm logTrigger todayItemReset">(Reset 'Today' Items)</button>
+
+
+
+
+        </div>
+
+
+        <div id="initialLogDestination">
+
+
+        </div>
+
+        <div id="archive">
+        </div>
+
+
+
+      </div>
+
+          <!--Anything Access Should have the .accessClearing tag
+           ======================================================  -->
+
+
+           <div id="accessClearing" style="display:none" class="accessClearing coachingMethods">
+
+                <div id="mainTemplateBody" class="panel-body" style="display: visible;">
+                     <button class="btn btn-sm btn-link pull-right minimizeThisElement" title="Minimize or Show">⎯</button>
+                      <button class="btn btn-sm btn-link pull-right hideThisElement" title="Put this Away">x</button>
+                      <button class="btn btn-sm btn-link pull-right nextStep inDevelopment" style="display:none" title="Next Step">Next Step</button>
+                       <div class="firstHelper accessGuidance" style="display: visible;"> </div>
+
+                       <textarea class = "firstForm forms form-control input-lg"  type="text" style="display: visible;" value="What is this?"></textarea>
+                       <div class="secondHelper accessGuidance" style="display: visible;"> </div>
+
+                      <textarea class = "secondForm forms form-control input-lg"  type="text" style="display: none;" value="What is this?"></textarea>
+                       <div class="thirdHelper accessGuidance" style="display: visible;"> <br></div>
+
+                      <textarea class = "thirdForm forms form-control input-lg"  type="text" style="display: none;" value="What is this?"></textarea>
+                       <div class="fourthHelper accessGuidance" style="display: visible;"> <br></div>
+
+                      <textarea class = "fourthForm forms form-control input-lg"  type="text" style="display: none;" value="What is this?"></textarea>
+
+      
+                  </div>
+           </div>
+
+
+
+           <div id="access2" style="display:none" class="access2 coachingMethods">
+
+                <div id="mainTemplateBody" class="panel-body" style="display: visible;">
+                       <div class="access2helper accessGuidance panel-body" style="display: visible;"> <br></div>
+                       <div class="access2helperb accessGuidance panel-body" style="display: none;"> <br></div>
+                       <div class="access2helperc accessGuidance panel-body" style="display: none;"> <br></div>
+                       <div class="access2helperd accessGuidance panel-body" style="display: none;"> <br></div>
+                       <div class="access2helpere accessGuidance panel-body" style="display: none;"> <br></div>
+                       <div class="access2helperf accessGuidance panel-body" style="display: none;"> <br></div>
+
+                       <button class = "access2form btn-primary btn btn-lg"  type="text" style="display: visible;">Yes</button>
+      
+                  </div>
+           </div>
+
+
+           <div id="access3" style="display:none" class="access3 coachingMethods">
+
+                <div id="mainTemplateBody" class="panel-body" style="display: visible;">
+                       <div class="access3helper accessGuidance panel-body" style="display: visible;"> <br></div>
+
+                       <button class = "access3form btn-primary btn btn-lg"  type="text" style="display: visible;">Ok</button>
+      
+                  </div>
+           </div>
+
+
+
+
+           <!-- End Main Space Zone 
+           ======================================================  -->
+
+
+
+      <div id="shadowWork" class="collapse 2ndPerson">
+
+                <!-- Begin Main Space Zone  -->
+
+          
+
+       <div id="shadowIntro" class="collapse panel-body">
+        <button type="button" id="DONEintroShadow"  class="btn btn-lg  btn-info pull-right shadowIntroCollapse" title="Ok!"></button><p> Welcome!</p>
+        <h3> This is a tool for 2nd person inquiry or automating coaching processes.  There are many ways you can use it!
+        </h3> 
+        <h3> 2nd Person inquiry is commonly used in psychology as a means for facilitating a sythesis between aspects of your psyche.  It is also used for facilitating shadow work and cultivating intimacy with the essential.</h3>   
+        <a class="toggleNext"> Learn More </a>
+        <div style="display:none">
+              <p>  For Shadow Work, or Shadow Integration Work (via Jung, Freud, etc.)
+              </p>
+              <p>  For facilitating the "Big Mind Process" (via Genpo Roshi)
+              </p>
+              <p>  For facilitating "Journey Work" (via Brandon Bays)
+              </p>
+              <p>  For facilitating trauma healing or conflict resolution with someone who is not available to be present with you (e.g. healing from conflict in a relationship wherein someone has passed)
+              </p>
+              <p>  For healing issue with money (Some brilliant 'Money Coaches' will have you have a daily 'talk with money' to make sure you and your internalized sense of money are on the same team, working together, etc.)
+              </p>
+              <p>  Extending the ideas and patterns in the above approaches, this tool can be used to address almost any issue in your life... to some extent... to procure fresh perspective on almost any matter... 
+              </p>
+              <p>  I will add more information, specific guidance and maps/systems for many of these lineages and applications, but I want to know what is useful for you. 
+              </p>
+              <p> <b> Quick Start:  </b> 
+              </p>
+              <p>  Define the practice first... choose someone to talk to (e.g. your sense of raw vital aliveness or your heartache)... fill in the 'who' field.  </p>
+              <p>  Choose what you want from the conversation, fill in the 'aim' area.  </p>
+              <p>  Start talking, and try out the sentance stems to bring your awareness to the intersubjective... (more on this theoretically later, try the experience first!)
+              </div>
+
+
+         <h3>  This can also be used to automate coaching methods</h3>  
+          <a class="toggleNext"> Learn more </a>
+              <div style="display:none">
+               <p>You can use the 'Access' Tab to automate various questions common to the 'Access Consciousness' facilitation style    </p>
+               <p>You can use the 'Byron Katie' Tab to automate various questions common to Byron Katie's Inquiry    </p>
+
+              </div>
+
+          <h3>  There are shortcuts to this as well</h3>  
+          <a class="toggleNext"> Learn more </a>
+              <div style="display:none">
+               <p>When your typing you can press enter to submit your answer as yourself, or openapple + enter to submit your answer as the other     </p>
+
+              </div>
+
+
+
+         </div>
+
+
+
+
+        <div class="panel panel-default" id="shadowHeader">
+          <div class="panel-body">  
+            <button type="button" id="refreshInquiry" class="btn btn-md btn-active pull-right">Refresh </button>
+            <button type="button" id="DONE" class="btn btn-md btn-active hide2ndPersonMode pull-right ">Close</button>
+            <button type="button" id="MIN" class="btn btn-md btn-active pull-right shadowInput showShadowBody" >Show/Hide</button>
+            <button type="button" id="shadowTools" class="btn btn-md btn-default pull-right  shadowTools" >Show/Hide Tools   </button>
+            <button type="button" class="btn btn-md btn-active btn-default pull-right " data-toggle="collapse" data-target="#shadowIntro">Info </button><br>
+
+            <p id="title2ndPersonArea"><b><span id="titleOf2ndPersonInquiry"> 2nd Person Inquiry</span> :: {{spokenTo}} :: {{spokenTo2}} </b>
+            <p>Aim :: {{aim2nd}} </p>
+
+            <div id="currentAcknowledgement" class="popup" style="display:none"><p>How would you like to be acknowledged?</p>
+            <input class="form-control input-lg" ng-model="currentAcknowledgement">  </input> 
+            <button class="pull-right btn btn-link btn-lg updateAcknowledgement b-close">ok</button>
+
+
+            </div>
+
+
+
+            <div id="aim2nd" class="collapse">
+
+              <p><input class="form-control input-lg" type="text" id="aim2ndInput" placeholder="What is your aim in this practice?"  ng-model="aim2nd"></input></p>
+              <p><input class="form-control input-lg" type="text" id="spokenTo" placeholder="Who are you speaking to? (Fill this out first, then click 'start new conversation')"  ng-model="spokenTo"></input></p>
+              <div class="3rd collapse">
+                <p><input class="form-control input-lg" type="text" id="spokenTo2" placeholder="Who else are you speaking to?"  ng-model="spokenTo2"></input></p>
+              </div>
+            </div>    
+
+
+          </div>
+
+          <div> 
+
+
+            <div id="shadowBody" class="collapse">
+              <div class="inquiriesView collapse panel-body">
+                <div id='newsPanel2' class='relatingText2'>
+                </div>
+              </div>
+
+              <div class="container col-xs-12 col-sm-8 col-md-9 col-lg-9 nm pull-left" id="mainShadow">
+
+               <div id="shadowCommentBody" class="viewZone" >
+
+               </div>
+
+
+               <DIV class="panel panel-body">
+
+                <div id="BIN" class="collapse injunctions2ndPerson" data-parent="#accordian">
+                  <p>In Being with this Being, what are you noticing? </p>
+                </div>
+                <div id="BIF" class="collapse injunctions2ndPerson" data-parent="#accordian">
+                  <p>In Being with this Being, what are you feeling? </p>
+                </div>
+                <div id="BIS" class="collapse injunctions2ndPerson" data-parent="#accordian">
+                  <p>In Being with this Being, what are you sensing? </p>
+                </div>
+                <div id="BIW" class="collapse injunctions2ndPerson" data-parent="#accordian">
+                  <p>In Being with this Being, what are you wanting? </p>
+                </div>
+                <div id="BIWF" class="collapse injunctions2ndPerson" data-parent="#accordian">
+                  <p>In Being with this Being, what are you wanting for them? </p>
+                </div>
+                <div id="BINN" class="collapse injunctions2ndPerson" data-parent="#accordian">
+                  <p>In Being with this Being, what are you needing? </p>
+                </div>
+
+                <div id="HIN" class="collapse injunctions2ndPerson" data-parent="#accordian">
+                  <p>In hearing what was expressed, what are you noticing? </p>
+                </div>
+                <div id="HIF" class="collapse injunctions2ndPerson" data-parent="#accordian">
+                  <p>In hearing what was expressed, what are you feeling? </p>
+                </div>
+                <div id="HIS" class="collapse injunctions2ndPerson" data-parent="#accordian">
+                  <p>In hearing what was expressed, what are you sensing? </p>
+                </div>
+                <div id="HIW" class="collapse injunctions2ndPerson" data-parent="#accordian">
+                  <p>In hearing what was expressed, what are you wanting? </p>
+                </div>
+                <div id="HIWF" class="collapse injunctions2ndPerson" data-parent="#accordian">
+                  <p>In hearing what was expressed, what are you wanting for them? </p>
+                </div>
+                <div id="HINN" class="collapse injunctions2ndPerson" data-parent="#accordian">
+                  <p>In hearing what was expressed, what are you needing? </p>
+                </div>                        
+                <div id="BBB" class="collapse injunctions2ndPerson" data-parent="#accordian">
+                  <p>Is that true?</p>
+                </div>
+                <div id="aim2nd" class="collapse">
+                  <p> What is your aim in this practice?</p>
+                  <input class="form-control input-md" type="text" id="aim2ndInput" placeholder="Clarify your Aim"  ng-model="aim2nd"></input>
+                </div>    
+
+                <div id="2ndPersonPrompt">
+                </div>
+              </div>
+              <DIV class="panel panel-body">
+
+
+                <textarea class="form-control input-lg shadowInput" autocomplete="off" type="text" rows="1" id="userInputS1" ng-model="commentTo"></textarea>
+
+                <input type='button' class="btn btn-info active btn-md"  onclick='changeTextComment6("shadowCommentBody", "myComment")' value='Speak as yourself'/>
+                <input type='button' class="btn btn-info active btn-md"  onclick='changeTextComment6("shadowCommentBody","thirdPersonComment")' value='Speak as {{spokenTo}}'/>
+                <div display="inline" class="3rd collapse">
+                  <input type='button' class="btn btn-info active btn-md"  onclick='changeTextComment6("shadowCommentBody", "secondPersonComment")' value='Speak as {{spokenTo2}}'/>
+                </div>
+
+                <input type='button' class="btn btn-info active btn-md"  onclick='changeTextComment5("shadowCommentBody")' value='Start new Conversation'/>
+
+
+              </div>
+            </div>
+
+
+            <div class="container col-xs-12 col-sm-4 col-md-3 col-lg-3 nm pull-right shadowInput" id="sidebarShadow">
+            
+
+             <button type="button" class="btn btn-link btn-block shadowMenuButton menuButtonSupplemental definePractice focus2 btn-toggle " >Define this practice <span class = "keyBoardShortCuts ">  ;m01</span></button>
+
+
+              <button type="button" class="btn btn-link btn-block menuButtonSupplemental shadowMenuButton focus2 btn-toggle" data-toggle="collapse" data-target="" id="3rdPersonToggle"  >Add A 3rd Person<span class = "keyBoardShortCuts ">  ;m02</span></button>
+
+
+
+              <span class="btn center-block  labelItem"> 2nd Person Inquiry</span>
+              
+              <button type="button" id="beingMenuTrigger" class="btn btn-block btn-lg btn-link   shadowMenuButton focus2 btn-toggle" >Being with you...<span class = " keyBoardShortCuts ">  ;m03</span></button>
+
+
+
+
+              <div id="being" class="collapse">
+
+                <div class="btn-group-vertical btn-block">
+                  <button type="button" id="beingNoticeButton" class="btn beingButtons hearingButtons btn-block btn-lg btn-link" >I Notice...</button>
+                  <button id="beingFeelButton" type="button"   class="btn beingButtons hearingButtons btn-block btn-lg btn-link">I Feel...</button>
+                  <button id="beingSenseButton" type="button" class="btn beingButtons hearingButtons btn-block btn-lg btn-link">I Sense...</button>
+                  <button id="beingWantButton" type="button" class="btn beingButtons hearingButtons btn-block btn-lg btn-link" >I Want...</button>
+                  <button id="beingWantForButton" type="button" class="btn beingButtons  hearingButtons btn-block btn-lg btn-link" >I Want for...</button>
+                  <button id="beingNeedButton" type="button" class="btn beingButtons  hearingButtons btn-block btn-lg btn-link" >I Need...</button>
+
+
+                </div>
+              </div>
+
+              <button type="button" id="hearingMenuTrigger" class="btn btn-block btn-lg btn-link shadowMenuButton  focus2 btn-toggle">Hearing that...<span class = " keyBoardShortCuts ">  ;m04</span></button>
+
+
+              <div id="hearing" class="collapse">
+                <div class="btn-group-vertical btn-block">
+
+
+
+                  <button type="button" id="hearingNoticeButton" class="btn hearingButtons btn-block btn-lg btn-link" >I Notice...</button>
+                  <button id="hearingFeelButton" type="button"   class="btn hearingButtons btn-block btn-lg btn-link">I Feel...</button>
+                  <button id="hearingSenseButton" type="button" class="btn hearingButtons btn-block btn-lg btn-link">I Sense...</button>
+                  <button id="hearingWantButton" type="button" class="btn hearingButtons btn-block btn-lg btn-link" >I Want...</button>
+                  <button id="hearingWantForButton" type="button" class="btn hearingButtons  btn-block btn-lg btn-link" >I Want for...</button>
+                  <button id="hearingNeedButton" type="button" class="btn hearingButtons  btn-block btn-lg btn-link" >I Need...</button>
+
+
+
+
+                </div>
+              </div>
+
+
+              
+
+
+              <button type="button" id="bigMindMenuTrigger" class="btn btn-block btn-lg btn-link  shadowMenuButton  focus2 btn-toggle ">Big Mind<span class = "  keyBoardShortCuts ">  ;m05</span></button>
+
+
+              <div id="bigMind" class="collapse">
+                <div class="btn-group-vertical btn-block">
+
+
+
+                  <button type="button" id="whoAreYou" class="btn hearingButtons btn-block btn-lg btn-link" >Who are you?</button>
+                  <button type="button" id="yourFunction" class="btn hearingButtons btn-block btn-lg btn-link" >What is your function?</button>
+                  <button type="button" id="serve" class="btn hearingButtons btn-block btn-lg btn-link" >How do you serve the self?</button>
+
+
+
+
+
+                </div>
+              </div>
+
+
+              <button type="button" id="demonsMenuTrigger" class="btn btn-block btn-lg btn-link shadowMenuButton focus2 btn-toggle ">Feeding your Demons<span class = " keyBoardShortCuts ">  ;m06</span></button>
+
+
+                    <div id="feedingDemons" class="collapse allShadowMenus">
+                      <div class="btn-group-vertical btn-block">
+
+
+
+                        <button type="button" id="want" class="btn hearingButtons feedingDemonsButton btn-block btn-lg btn-link" >What do you want?</button>
+                        <button type="button" id="need" class="btn hearingButtons feedingDemonsButton btn-block btn-lg btn-link" >What do you need?</button>
+                        <button type="button" id="feelLike" class="btn hearingButtons feedingDemonsButton btn-block btn-lg btn-link" >What would it feel like to get that?</button>
+
+
+                      </div>
+                    </div>
+
+
+              <span class="btn center-block    labelItem"> Coaching</span>
+
+              <button type="button" id="accessMenuTrigger" class="btn btn-block btn-lg btn-link shadowMenuButton focus2 btn-toggle ">Access Consciousness<span class = "  keyBoardShortCuts ">  ;m07</span></button>
+
+
+                    <div id="access" class="collapse allShadowMenus">
+                      <div class="btn-group-vertical btn-block">
+
+
+                        <button type="button" id="clarifying1" class="btn hearingButtons accessButton btn-block btn-lg btn-link" >Clarifying Question 1 <span class = "keyBoardShortCuts">  ;01</span><br><span class="menuSubtext">What would you.. </span></button>
+                        <button type="button" id="clarifying2" class="btn hearingButtons accessButton btn-block btn-lg btn-link" >Clarifying Question 2<span class = "keyBoardShortCuts">  ;02</span><br><span class="menuSubtext">If anything was possible... </span></button>
+                        <button type="button" id="clarifying3" class="btn hearingButtons accessButton btn-block btn-lg btn-link" >Clarifying Question 3<span class = "keyBoardShortCuts">  ;03</span><br><span class="menuSubtext">What would you change or create.. </span></button>
+
+                        <button type="button" id="clearing1" class="btn hearingButtons accessButton btn-block btn-lg btn-link" >Clearing Question 1 <span class = "keyBoardShortCuts">  ;04</span><br><span class="menuSubtext">Everthing this brought up... </span></button>
+                        <button type="button" id="clearing2" class="btn hearingButtons accessButton btn-block btn-lg btn-link" >Clearing Question 2<span class = "keyBoardShortCuts">  ;05</span><br><span class="menuSubtext">Thoughts, feelings... </span></button>
+                        <button type="button" id="clearing3" class="btn hearingButtons accessButton btn-block btn-lg btn-link" >Clearing Question 3<span class = "keyBoardShortCuts">  ;06</span><br><span class="menuSubtext">Alignments, agreements... </span></button>
+                        <button type="button" id="clearing4" class="btn hearingButtons accessButton btn-block btn-lg btn-link" >Clearing Question 4 <span class = "keyBoardShortCuts">  ;07</span><br><span class="menuSubtext">Expectations, projections.. </span></button>
+                        <button type="button" id="clearing5" class="btn hearingButtons accessButton btn-block btn-lg btn-link" >Clearing Question 5 <span class = "keyBoardShortCuts">  ;08</span><br><span class="menuSubtext">Decisions, Judgments... </span></button>
+                        <button type="button" id="clearing6" class="btn hearingButtons accessButton btn-block btn-lg btn-link" >Clearing Question 6 <span class = "keyBoardShortCuts">  ;09</span><br><span class="menuSubtext">Yours, Others... </span></button>
+                        <button type="button" id="clearing7" class="btn hearingButtons accessButton btn-block btn-lg btn-link" >Clearing Question 7 <span class = "keyBoardShortCuts">  ;10</span><br><span class="menuSubtext">Life and Living... </span></button>
+
+                        <button type="button" id="creating1" class="btn hearingButtons accessButton btn-block btn-lg btn-link" >Creating Question 1 <span class = "keyBoardShortCuts">  ;11</span><br><span class="menuSubtext">Point of view... </span></button>
+                        <button type="button" id="creating2" class="btn hearingButtons accessButton btn-block btn-lg btn-link" >Creating Question 2 <span class = "keyBoardShortCuts">  ;12</span><br><span class="menuSubtext">Clarity and Ease...</span></button>
+                        <button type="button" id="creating3" class="btn hearingButtons accessButton btn-block btn-lg btn-link" >Creating Question 3 <span class = "keyBoardShortCuts">  ;13</span><br><span class="menuSubtext">What else is possible... </span></button>
+
+
+                      </div>
+                    </div>
+
+                    <button type="button" id="byronMenuTrigger"  class="btn btn-block btn-lg btn-link  shadowMenuButton menuButton  focus2 btn-toggle">Byron Katie's Work...<span class = " keyBoardShortCuts ">  ;m08</span></button>
+
+
+              <div id="inquiry2ndPerson" class="collapse">
+                <div class="btn-group-vertical btn-block">
+
+
+
+                  <button type="button" id="isItTrue" class="btn hearingButtons btn-block btn-lg btn-link" >Is it true?</button>
+                  <button type="button" id="isItTrue2" class="btn hearingButtons btn-block btn-lg btn-link" >Can you know?</button>
+                  <button type="button" id="feelingImpact" class="btn hearingButtons btn-block btn-lg btn-link" >How do you feel...</button>
+                  <button type="button" id="feelingImpact2" class="btn hearingButtons btn-block btn-lg btn-link" >How about without...</button>
+                  <button type="button" id="turnAround" class="btn hearingButtons btn-block btn-lg btn-link" >Can you find a turnaround?</button>
+                  <button type="button" id="turnAroundExamples" class="btn hearingButtons btn-block btn-lg btn-link" >What are 3 specific examples of that being true?</button>
+                  <button type="button" id="anotherTurnAround" class="btn hearingButtons btn-block btn-lg btn-link" >Another Turnaround?</button>
+
+
+
+
+
+                </div>
+              </div>
+
+           <button type="button" id="miscCoachingTools" class="btn btn-block btn-lg btn-link shadowMenuButton focus2 btn-toggle ">Misc Coaching Tools<span class = " keyBoardShortCuts ">  ;m09</span></button>
+
+
+                            <div id="coachingMisc" class="collapse allShadowMenus">
+                              <div class="btn-group-vertical btn-block">
+
+
+                                <button type="button" id="acknowledgement" class="btn hearingButtons coachingButton btn-block btn-lg btn-link" >Acknowledgement  <span class = "keyBoardShortCuts">  (⌘k) ;01></span></button>
+                                
+                                <button type="button" id="redefineAcknowledgement" class="btn hearingButtons coachingButton btn-block btn-lg btn-link" >Redefine Acknowledgement <span class = " keyBoardShortCuts ">  (⌘y) ;02</button>
+                              
+                                <button type="button" id="evaluation" class="btn hearingButtons coachingButton btn-block btn-lg btn-link" > Self-Evaluate <span class = " keyBoardShortCuts ">  (⌘z) ;03</button>
+                               
+                                <button type="button" id="redefineEvaluation" class="btn hearingButtons coachingButton btn-block btn-lg btn-link" >Redefine Evalaution <span class = " keyBoardShortCuts ">  (⌘u) ;04</button>
+
+
+                                <button type="button" id="emergence1" class="btn hearingButtons coachingButton btn-block btn-lg btn-link" >Emergence  <span class = " keyBoardShortCuts ">  (⌘e)  ;05</button>
+                                
+
+
+                                <button type="button" id="practiceDesign1" class="btn hearingButtons coachingButton btn-block btn-lg btn-link" >Practice Design <span class = " keyBoardShortCuts ">  ;06</span><br><span class="menuSubtext">What are you here for? </span></button>
+
+                                 
+                                <button type="button" id="practiceDesign2" class="btn hearingButtons coachingButton btn-block btn-lg btn-link" >Practice Design 2 <span class = " keyBoardShortCuts ">  ;07<br><span class="menuSubtext">How might you create this? </span></button>
+
+                                 
+                                <button type="button" id="practiceDesign3" class="btn hearingButtons coachingButton btn-block btn-lg btn-link" >Practice Design 3 <span class = " keyBoardShortCuts ">  ;08<br><span class="menuSubtext">What, of this, will you choose?</span></button>
+
+                                 
+                                <button type="button" id="practiceDesign4" class="btn hearingButtons coachingButton btn-block btn-lg btn-link" >Practice Design 4 <span class = " keyBoardShortCuts ">  ;09<br><span class="menuSubtext">Working?  Leverage?  Blindspots?</span></button>
+
+                               <button type="button" id="integrityCoaching1" class="btn hearingButtons coachingButton btn-block btn-lg btn-link" >Integrity Coaching <span class = " keyBoardShortCuts ">  ;10</button>                                 
+
+                               <button type="button" id="commitmentCoaching1" class="btn hearingButtons coachingButton btn-block btn-lg btn-link" >Commitment Coaching <span class = " keyBoardShortCuts ">  ;11</button>     
+
+                               <button type="button" id="beingWith1" class="btn hearingButtons coachingButton btn-block btn-lg btn-link" >Being with <span class = "keyBoardShortCuts">  (⌘b) ;12</span><br><span class="menuSubtext">What is it like to be... </span> </button>
+                                                            
+
+                               <button type="button" id="generative" class="btn hearingButtons coachingButton btn-block btn-lg btn-link" >Generative <span class = "keyBoardShortCuts">  ;13</span><br><span class="menuSubtext">What would be generative...</span> </button>
+    
+                                <button type="button" id="under1" class="btn hearingButtons coachingButton btn-block btn-lg btn-link" >Under This  <span class = " keyBoardShortCuts ">  (⌘g) ;14</button>
+                            
+
+
+
+                              </div>
+                            </div>
+
+                      <button type="button" id="immunityToChangeTriggers" class="btn btn-block btn-lg btn-link shadowMenuButton focus2 btn-toggle ">Immunity to Change Coaching<span class = " keyBoardShortCuts ">  ;m10</span></button>
+
+
+                            <div id="immunityToChangeMenu" class="collapse allShadowMenus">
+                              <div class="btn-group-vertical btn-block">
+
+                                 <button type="button" id="immunityClarifying1" class="btn hearingButtons immunityButton btn-block btn-lg btn-link" >Clarifying Question 1 <span class = "keyBoardShortCuts">  ;01</span><br><span class="menuSubtext">What new behavior would you... </span></button>
+
+
+                                 <button type="button" id="immunityClarifying2" class="btn hearingButtons immunityButton btn-block btn-lg btn-link" >Clarifying Question 2 <span class = "keyBoardShortCuts">  ;02</span><br><span class="menuSubtext">What are you doing instead? </span></button>
+
+                                 <button type="button" id="immunityClarifying3" class="btn hearingButtons immunityButton btn-block btn-lg btn-link" >Clarifying Question 3 <span class = "keyBoardShortCuts">  ;03</span><br><span class="menuSubtext">What would it feel like to...  </span></button>
+
+                                 <button type="button" id="immunityClarifying4" class="btn hearingButtons immunityButton btn-block btn-lg btn-link" >Clarifying Question 4 <span class = "keyBoardShortCuts">  ;04</span><br><span class="menuSubtext">What would you need to believe... </span></button>
+
+                                 <button type="button" id="immunityClarifying5" class="btn hearingButtons immunityButton btn-block btn-lg btn-link" >Clarifying Question 5 <span class = "keyBoardShortCuts">  ;05</span><br><span class="menuSubtext">What would you need to be committed to... </span></button>
+                                                                
+
+                              </div>
+                            </div>
+
+                       <button type="button" id="sedonaMethodTriggers" class="btn btn-block btn-lg btn-link shadowMenuButton focus2 btn-toggle ">Sedona Method Coaching<span class = " keyBoardShortCuts ">  ;m11</span></button>
+
+
+                            <div id="sedonaMethodMenu" class="collapse allShadowMenus">
+                              <div class="btn-group-vertical btn-block">
+
+                                 <button type="button" id="sedonaClearing1" class="btn hearingButtons sedonaMethod btn-block btn-lg btn-link" >Clearing Question 1<span class = "keyBoardShortCuts">  ;01</span><br><span class="menuSubtext">Welcome this... </span></button>
+
+                                 <button type="button" id="sedonaClearing2" class="btn hearingButtons sedonaMethod btn-block btn-lg btn-link" >Clearing Question 2<span class = "keyBoardShortCuts">  ;02</span><br><span class="menuSubtext">Could you... </span></button>
+
+                                 <button type="button" id="sedonaClearing3" class="btn hearingButtons sedonaMethod btn-block btn-lg btn-link" >Clearing Question 3<span class = "keyBoardShortCuts">  ;03</span><br><span class="menuSubtext">Would you...</span></button>
+
+                                 <button type="button" id="sedonaClearing4" class="btn hearingButtons sedonaMethod btn-block btn-lg btn-link" >Clearing Question 4<span class = "keyBoardShortCuts">  ;04</span><br><span class="menuSubtext">When? </span></button>
+
+
+                                                                
+
+                              </div>
+                            </div>
+
+<!-- #loopingTriggers connection -->
+<!-- .loopingMenu connection -->
+<!-- .looping connection -->
+                                                    
+         <button type="button" id="loopingTriggers" class="btn btn-block btn-lg btn-link shadowMenuButton focus2 btn-toggle ">Looping<span class = " keyBoardShortCuts ">  ;m12</span></button>
+
+
+                            <div id="loopingMenu" class="collapse allShadowMenus">
+                              <div class="btn-group-vertical btn-block">
+
+                                 <button type="button" id="looping1" class="btn hearingButtons looping btn-block btn-lg btn-link" >Looping Question 1<span class = "keyBoardShortCuts">  ;01</span><br><span class="menuSubtext">Name the Trigger... </span></button>
+
+                                 <button type="button" id="looping2" class="btn hearingButtons looping btn-block btn-lg btn-link" >Looping Question 2<span class = "keyBoardShortCuts">  ;02</span><br><span class="menuSubtext">Describe the Memory... </span></button>
+
+                                 <button type="button" id="looping3" class="btn hearingButtons looping btn-block btn-lg btn-link" >Looping Question 3<span class = "keyBoardShortCuts">  ;03</span><br><span class="menuSubtext">Describe this Moment...</span></button>
+
+                                
+
+                                                                
+
+                              </div>
+                            </div>
+
+                                                    
+         
+
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Appreciative Inquiry -->
+
+
+
+    <div id="appreciativeInquiry" class="collapse panel panel-default">
+     <div class="panel-body">
+       <button type="button" id="shadowTools" class="btn btn-lg  btn-default pull-right glyphicon glyphicon-align-justify shadowTools" >   </button>
+       <button type="button" class="btn btn-sm btn-default pull-right hideThis2nd" title="Done"> X</button>
+       <button type="button" class="btn btn-sm btn-default glyphicon glyphicon-chevron-down pull-right toggleNextMain" title="Minimize"> </button>
+       <button type="button" class="btn btn-sm btn-default glyphicon glyphicon-info-sign pull-right " title="Info" data-toggle="collapse" data-target="#appreciativeInfo"> </button> <h3> Appreciative Inquiry :: {{appreciated}}<h3>  
+     </div>
+
+     <div id="appreciativeBody" class="collapse">
+
+       <div id="defineAppreciative" class="collapse">
+        <input class="form-control input-lg" type="text" id="Option1" placeholder="What would you like to connect to your appreciation around?"  ng-model="appreciated"></input>
+      </div>
+
+      <div class="panel-body accordian" id="accordian"> 
+
+
+        <div id="TMM" class="collapse" data-parent="#accordian">
+          <p>What can you appreciate about being alive right now? </p>
+        </div>
+        <div id="TMF" class="collapse" data-parent="#accordian">
+          <p>What can you appreciate about how far you have come in your life? </p>
+        </div>
+        <div id="TMO" class="collapse" data-parent="#accordian">
+          <p>What can you appreciate about the opportunities presenting themselves in your life right now? </p>
+        </div>
+        <div id="TMW" class="collapse" data-parent="#accordian">
+          <p>What is working in your life right now? </p>
+          <p>What can you appreciate about this? </p>
+        </div>
+        <div id="TMNW" class="collapse" data-parent="#accordian">
+          <p>What is not working in your life right now? </p>
+          <p>What can you appreciate about this? </p>
+
+        </div>
+
+
+        <div id="ABIN" class="collapse" data-parent="#accordian">
+          <p>In being with this, what are you noticing? </p>
+        </div>
+        <div id="ABIF" class="collapse" data-parent="#accordian">
+          <p>In being with this, what are you feeling? </p>
+        </div>
+        <div id="ABIS" class="collapse" data-parent="#accordian">
+          <p>In being with this, what are you sensing? </p>
+        </div>
+        <div id="ABIW" class="collapse" data-parent="#accordian">
+          <p>In being with this, what are you wanting? </p>
+        </div>
+        <div id="ABIWF" class="collapse" data-parent="#accordian">
+          <p>In being with this, what are you wanting for them? </p>
+        </div>
+        <div id="ABINN" class="collapse" data-parent="#accordian">
+          <p>In being with this, what are you needing? </p>
+        </div>
+
+        <div id="HBIN" class="collapse" data-parent="#accordian">
+          <p>In letting this in, what are you noticing? </p>
+        </div>
+        <div id="HBIF" class="collapse" data-parent="#accordian">
+          <p>In letting this in, what are you feeling? </p>
+        </div>
+        <div id="HBIS" class="collapse" data-parent="#accordian">
+          <p>In letting this in, what are you sensing? </p>
+        </div>
+        <div id="HBIW" class="collapse" data-parent="#accordian">
+          <p>In letting this in, what are you wanting? </p>
+        </div>
+        <div id="HBIWF" class="collapse" data-parent="#accordian">
+          <p>In letting this in, what are you wanting for them? </p>
+        </div>
+        <div id="HBINN" class="collapse" data-parent="#accordian">
+          <p>In hearing what was expressed, what are you needing? </p>
+        </div>
+
+
+        <div class="container col-xs-12 col-sm-8 col-md-8.5 col-lg-9 nm pull-left mainInsideView" id="main">
+
+
+
+
+          <div id="appreciativeCommentBody" style="max-height:400px;overflow:auto;" class="viewZone">
+          </div>
+
+
+          <textarea class="form-control input-lg appreciativeInput" autocomplete="off" type="text" rows="1" id="userInputA1" ng-model="commentTo"></textarea>
+
+          <input type='button' class="btn btn-info active"  onclick='changeTextComment7("userInputA1","appreciativeCommentBody","")' value='Appreciate This'/>
+
+
+
+        </div>
+
+
+
+
+
+        <div class="container col-xs-12 col-sm-4 col-md-3.5 col-lg-3 nm pull-right sidebarToolSet" id="sidebarAppreciative">
+
+
+          <button type="button" class="btn btn-block btn-lg btn-info" data-toggle="collapse" data-target="#defineAppreciative">Define this...</button>
+
+          <button type="button" class="btn btn-block btn-lg btn-info" data-toggle="collapse" data-target="#themesA">Themes...</button>
+
+
+          <div id="themesA" class="collapse">
+            <div class="btn-group-vertical btn-block">
+
+              <button type="button" class="btn btn-block btn-lg btn-info" data-toggle="collapse" data-target="#TMM" onclick='setText4("What I appreciate about being alive right now is ")'>This Moment...</button>
+              <button type="button" class="btn btn-block btn-lg btn-info" data-toggle="collapse" data-target="#TMF"  Onclick='setText4("What I appreciate about how far I have come is ")'>How far I <br>have come</button>
+              <button type="button" class="btn btn-block btn-lg btn-info" data-toggle="collapse" data-target="#TMO"  Onclick='setText4("What I appreciate about the opportunities present in my life")'>Opportunities...</button>
+              <button type="button" class="btn btn-block btn-lg btn-info" data-toggle="collapse" data-target="#TMW"  Onclick='setText4("What I can appreciate about what is working in my life is ")' >What is working...</button>
+              <button type="button" class="btn btn-block btn-lg btn-info" data-toggle="collapse" data-target="#TMNW"  Onclick='setText4("What I can appreciate about what is not working in my life is ")'>What is not working...</button>
+
+            </div>
+          </div>
+
+
+          <button type="button" class="btn btn-block btn-lg btn-info" data-toggle="collapse" data-target="#beingA">Being with this...</button>
+
+
+          <div id="beingA" class="collapse">
+
+            <div class="btn-group-vertical btn-block">
+              <button type="button" class="btn btn-block btn-lg btn-info" data-toggle="collapse" data-target="#BIN" onclick='setText4("Being with this I notice ")'>I Notice...</button>
+              <button type="button" class="btn btn-block btn-lg btn-info" data-toggle="collapse" data-target="#BIF"  Onclick='setText4("Being with this I feel ")'>I Feel...</button>
+              <button type="button" class="btn btn-block btn-lg btn-info" data-toggle="collapse" data-target="#BIS"  Onclick='setText4("Being with this I sense ")'>I Sense...</button>
+              <button type="button" class="btn btn-block btn-lg btn-info" data-toggle="collapse" data-target="#BIW"  Onclick='setText4("Being with this I want ")' >I Want...</button>
+              <button type="button" class="btn btn-block btn-lg btn-info" data-toggle="collapse" data-target="#BIWF"  Onclick='setText4("Being with this I want for you to ")'>I Want for...</button>
+              <button type="button" class="btn btn-block btn-lg btn-info" data-toggle="collapse" data-target="#BINN" Onclick='setText4("Being with this I need ")'  >I Need...</button>
+
+
+            </div>
+          </div>
+
+          <button type="button" class="btn btn-block btn-lg btn-info" data-toggle="collapse" data-target="#letting">Letting this in...</button>
+
+
+          <div id="letting" class="collapse">
+            <div class="btn-group-vertical btn-block">
+
+              <button type="button" class="btn btn-block btn-lg btn-info" data-toggle="collapse" data-target="#BIN" onclick='setText4("Letting this in I notice ")'>I Notice...</button>
+              <button type="button" class="btn btn-block btn-lg btn-info" data-toggle="collapse" data-target="#HIF"  Onclick='setText4("Letting this in I feel ")'>I Feel...</button>
+              <button type="button" class="btn btn-block btn-lg btn-info" data-toggle="collapse" data-target="#HIS"  Onclick='setText4("Letting this in I sense ")'>I Sense...</button>
+              <button type="button" class="btn btn-block btn-lg btn-info" data-toggle="collapse" data-target="#HIW"  Onclick='setText4("Letting this in I want ")' >I Want...</button>
+              <button type="button" class="btn btn-block btn-lg btn-info" data-toggle="collapse" data-target="#HIWF"  Onclick='setText4("Letting this in I want for you to ")'>I Want for...</button>
+              <button type="button" class="btn btn-block btn-lg btn-info" data-toggle="collapse" data-target="#HINN" Onclick='setText4("Letting this in I need ")'  >I Need...</button>
+
+
+            </div>
+          </div>
+
+
+
+        </div>
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<div id="SMC1" class="collapse decisionMaker">
+  <div class="panel panel-default" id="ri">
+    <div class="panel-body">
+      <button type="button" class="btn btn-sm btn-default pull-right hideThis3rd" title="Done">X </button>
+      <button type="button" class="btn btn-sm btn-default glyphicon glyphicon-chevron-down pull-right toggleNextMain" title="Minimize"> </button>
+      <button type="button" class="btn btn-sm btn-default glyphicon glyphicon-info-sign pull-right " title="Info" data-toggle="collapse" data-target="decisionInfo"> </button> <h3> Sedona Method Decision Maker<h3>
+
+
+    </div>
+    <div class="panel-body collapse" id="decisionBodyMain">
+      <container> 
+        <p> Explore how a difficult decision can be an opportunity to uncover insight.</p>
+
+        <p> Feel into two choices you could make a decision between to start, and write them here: </p>
+        <input class="form-control input-lg sedonaDecisionInput" type="text" id="Option1" placeholder="Option #1"  ng-model="Option1"></input>
+        <br>
+        <input class="form-control input-lg sedonaDecisionInput" type="text" id="Option2" placeholder="Option #2" ng-model="Option2"></input>
+        <br>
+
+        <button type="button" class="btn btn-lg btn-info activateSedonaSimpleMode ">Go!</button>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- # This is the Sedona Decision Simple Mode  -->
+
+
+
+
+
+
+
+  <div id="sedonaSimpleModeStep1" class="collapse sedonaSimpleMode">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <button type="button" class="btn btn-sm btn-default glyphicon glyphicon-chevron-down pull-right toggleNextMain" title="Minimize"> </button>
+        <button type="button" class="btn btn-sm btn-default glyphicon glyphicon-info-sign pull-right " title="Info" data-toggle="collapse" data-target="decisionInfo"> </button> <h3> Sedona Method Decision Maker<h3>
+      </div>
+      <div class="panel-body"> <container><p> Focus on the first option now:</p>
+        <p><b>{{Option1}}</b></p>
+
+
+        <p class="decisionInjunction "> Imagine you have already chosen this, what would this feel like?</p>
+
+        <div id="sedonaSimpleChoice1CommentBody" class="viewZone" >
+        </div>  
+
+
+
+        <!---Inquiry Part 2 -->
+        <div class="panel-body clearings clearing1B">
+         <p> What is underneath this experience?  What longings, yearnings, desires, drives are most present?</p>
+
+       </div>
+
+
+       <!---Clearing Part 1 -->
+       <div class="panel-body clearings clearing1">
+         <p> Welcome this experience, these longings, these emotions as best you can including ANY resistance to this.</p>
+         <button type="button" class="btn btn-lg  btn-info glyphicon glyphicon-chevron-right pull-right startClearing2"    ></button>
+       </div>
+
+       <div class="panel-body clearings clearing2">
+        <p> And could you simply let go of wanting this moment and this experience to be any different then it is, including any resistance to this, as best you can?</p>
+        <button type="button" class="btn btn-lg  btn-info glyphicon glyphicon-chevron-right pull-right startClearing3"    ></button>
+      </div>
+
+
+      <div class="panel-body clearings clearing3">
+       <p> Would you be willing to?</p>
+       <button type="button" class="btn btn-lg  btn-info glyphicon glyphicon-chevron-right pull-right startClearing4"    ></button>
+     </div>
+
+
+     <div class="panel-body clearings clearing4">
+       <p> When?</p>
+       <p> (Consider this an invitation)</p>
+       <button type="button" class="btn btn-lg  btn-info glyphicon glyphicon-chevron-right pull-right doneClearing"    ></button>
+     </div>
+
+
+
+     <div class="journalEntry">
+      <textarea class="form-control input-lg decision1" autocomplete="off" type="text" rows="3" id="userInputSSMS1" ></textarea>
+
+      <Button type="submit" class="btn btn-info btn-lg  journalEntryMade startClearing" onclick='changeTextComment7("userInputSSMS1","sedonaSimpleChoice1CommentBody", "none")'>Go!</Button>
+      <br><br>
+    </div>
+
+
+    <br>
+    <br>
+    <br>
+
+
+    <button type="button" id="goToNextStepDecisionButton"  class="btn btn-lg  btn-info pull-right goToSedonaSimpleModeStep2 clearings decision2"  >Go to the Next Step</button>
+    <button type="button" id="deeperDecisionButton"  class="btn btn-lg  btn-info pull-right oneStepDeeper clearings"  >Go one step Deeper</button>
+  </container>
+
+</div>
+</div>
+</div>
+
+
+<div id="sedonaSimpleModeStep2" class="collapse sedonaSimpleMode">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <button type="button" class="btn btn-lg btn-default pull-right " data-toggle="collapse" data-target="#sedonaSimpleModeStep2" title="Done">X </button>
+      <button type="button" class="btn btn-lg btn-default glyphicon glyphicon-chevron-down pull-right toggleNextMain" title="Minimize"> </button>
+      <button type="button" class="btn btn-lg btn-default glyphicon glyphicon-info-sign pull-right " title="Info" data-toggle="collapse" data-target="decisionInfo"> </button> <h3> Sedona Method Decision Maker<h3><h4>Sedona Method Decision Maker</h4>
+    </div>
+    <div class="panel-body">  <container>
+      <p> Focus on the second option now:</p>
+      <p><b>{{Option2}}</b></p>
+
+      <p class="decisionInjunction"> Imagine you have already chosen this, what would this feel like?</p>
+
+      <div id="sedonaSimpleChoice2CommentBody" class"viewZone" >
+      </div>  
+
+
+      <!---Inquiry Part 2 -->
+      <div class="panel-body clearings clearing1B">
+       <p> What is underneath this experience?  What longings, yearnings, desires, drives are most present?</p>
+
+     </div>
+
+     <div class="panel-body clearings clearing1">
+       <p> Welcome this experience, these longings, these emotions as best you can, including ANY resistance to this.</p>
+       <button type="button" class="btn btn-lg  btn-info glyphicon glyphicon-chevron-right pull-right startClearing2"    ></button>
+     </div>
+
+     <div class="panel-body clearings clearing2">
+      <p> And could you simply let go of wanting this moment and this experience to be any different then it is, including any resistance to this, as best you can?</p>
+      <button type="button" class="btn btn-lg  btn-info glyphicon glyphicon-chevron-right pull-right startClearing3"    ></button>
+    </div>
+
+
+    <div class="panel-body clearings clearing3">
+     <p> Would you be willing to?</p>
+     <button type="button" class="btn btn-lg  btn-info glyphicon glyphicon-chevron-right pull-right startClearing4"    ></button>
+   </div>
+
+
+   <div class="panel-body clearings clearing4">
+     <p> When?</p>
+     <p> (Consider this an invitation)</p>
+     <button type="button" class="btn btn-lg  btn-info glyphicon glyphicon-chevron-right pull-right doneClearing"    ></button>
+   </div>
+
+
+   <div class="journalEntry">
+
+    <textarea class="form-control input-lg" autocomplete="off" type="text" rows="3" id="userInputSSMS2" ></textarea>
+
+    <Button type="submit" class="btn btn-info btn-lg journalEntryMade startClearing" onclick='changeTextComment7("userInputSSMS2","sedonaSimpleChoice2CommentBody", "none")'>Go!</Button>
+  </div>
+  <br><br>
+
+
+  <br>
+  <br><br>
+
+
+
+  <button type="button" id="goToNextStepDecisionButton"  class="btn btn-lg  btn-info pull-right goToSedonaSimpleModeStep1"  >Go to the Next Step</button>
+  <button type="button" id="deeperDecisionButton" class="btn btn-lg  btn-info pull-right oneStepDeeper"  >Go one step Deeper</button>         
+</container>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+<!-- # These are the Sedona Decision maker inquiry pieces -->
+
+
+
+<div id="SM1A" class="collapse sedonaAdvantagesMode">
+  <div class="panel panel-default">
+    <div class="panel-body"><h4>Sedona Method Decision Maker</h4>
+    </div>
+    <div class="panel-body"> <container><p> Focus on the first option now:</p>
+      <p>{{Option1}}</p>
+
+      <p>What is one advantage of this option? </p> 
+      <p>Write it down</p>
+      <p>Uncover and Clear What is Underneath it</p>
+      <p>Then go to the next step</p>
+      <button type="button" class="btn btn-sm  btn-info glyphicon glyphicon-chevron-right pull-right"    data-toggle="collapse" data-target="#SM1A, #SM1B"></button>
+      <button type="button" class="btn btn-sm btn-default glyphicon glyphicon-chevron-left pull-left " data-toggle="collapse" data-target="#SMC1, #SM1A"></button>
+      <button type="button" class="btn btn-sm btn-info center-block " data-toggle="collapse" data-target="#SMRC1">Look Underneath</button></container>
+
+    </div>
+  </div>
+</div>
+
+<div id="SM1B" class="collapse">
+  <div class="panel panel-default">
+    <div class="panel-body"><h4>Sedona Method Decision Maker</h4>
+    </div>
+    <div class="panel-body">    <container>
+      <p> Stay with the first option now</p>
+      <p>{{Option1}}</p>
+      <p> What is one dis-advantage of this option?</p>
+      <p>  Write it down:</p>
+      <button type="button" class="btn btn-lg  btn-info glyphicon glyphicon-chevron-right pull-right"    data-toggle="collapse" data-target="#SM1B, #SM2A"></button>
+      <button type="button" class="btn btn-lg btn-default glyphicon glyphicon-chevron-left pull-left " data-toggle="collapse" data-target="#SM1A, #SM1B"></button>
+      <button type="button" class="btn btn-lg btn-info center-block " data-toggle="collapse" data-target="#SMRC1D">Look Underneath</button>
+    </container>
+  </div>
+</div>
+</div>
+
+
+<div id="SM2A" class="collapse">
+  <div class="panel panel-default">
+    <div class="panel-body"><h4>Sedona Method Decision Maker</h4>
+    </div>
+    <div class="panel-body">  <container>
+      <p> Focus on the second option now:</p>
+      <p>{{Option2}}</p>
+
+      <p> What is one advantage of this option?  </p>
+      <p>Write it down:</p>
+      <button type="button" class="btn btn-lg  btn-info glyphicon glyphicon-chevron-right pull-right"    data-toggle="collapse" data-target="#SM2A, #SM2B"></button>
+      <button type="button" class="btn btn-lg btn-default glyphicon glyphicon-chevron-left pull-left " data-toggle="collapse" data-target="#SM1B, #SM2A"></button>
+      <button type="button" class="btn btn-lg btn-info center-block " data-toggle="collapse" data-target="#SMRC1">Look Underneath</button>
+    </container>
+  </div>
+</div>
+</div>
+
+<div id="SM2B" class="collapse">
+  <div class="panel panel-default">
+    <div class="panel-body"><h4>Sedona Method Decision Maker</h4>
+    </div>
+    <div class="panel-body">  <container><p> Focus on the second option still:</p>
+      <p>{{Option2}}</p>
+
+      <p> What is one disadvantage of this option?  </p>
+      <p>Write it down:</p>
+      <button type="button" class="btn btn-lg  btn-info glyphicon glyphicon-chevron-right pull-right"    data-toggle="collapse" data-target="#SM2B, #SM1A"></button>
+      <button type="button" class="btn btn-lg btn-default glyphicon glyphicon-chevron-left pull-left " data-toggle="collapse" data-target="#SM2A, #SM2B"></button>
+      <button type="button" class="btn btn-lg btn-info center-block " data-toggle="collapse" data-target="#SMRC1D">Look Underneath</button>
+    </container>
+  </div>
+</div>
+</div>
+
+<div id="SMRC1" class="collapse">
+  <container>
+    <div class="panel panel-default">
+      <div class="panel-body"><h4>Illuminate the Unconscious</h4>
+      </div>
+      <div class="panel-body">
+        <p> Why is this an advantage?  What would need to be motivating you in order for this to be an advantage? 
+        </P> 
+        <p> <-- Use the Longings list under the experience tab for some fresh ideas</p>
+        <button type="button" class="btn btn-lg  btn-info glyphicon glyphicon-chevron-right pull-right"    data-toggle="collapse" data-target="#SMRC1, #SMRC2"></button>
+        <button type="button" class="btn btn-lg btn-default glyphicon glyphicon-chevron-left pull-left " data-toggle="collapse" data-target="#SM2B, #SMRC1"></button></Container>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="SMRC1D" class="collapse">
+    <container>
+      <div class="panel panel-default">
+        <div class="panel-body"><h4>Illuminate the Unconscious</h4>
+        </div>
+        <div class="panel-body">
+          <p> Why is this a disadvantage? Look underneath at what you are wanting which would have this be a dis-advantage, and write it down. </P> 
+            <h5> <-- Use the Longings list under the experience tab for some fresh ideas</h5>
+            <button type="button" class="btn btn-lg  btn-info glyphicon glyphicon-chevron-right pull-right"    data-toggle="collapse" data-target="#SMRC1D, #SMRC2D"></button>
+            <button type="button" class="btn btn-lg btn-default glyphicon glyphicon-chevron-left pull-left " data-toggle="collapse" data-target="#SM2B, #SMRC1D"></button></Container>
+          </div>
+        </div>
+      </div>
+      <!--Being With -->
+      <!--Dealing with Resistance -->
+      <!--Noticing -->
+
+
+      <div id="SMRC2" class="collapse">
+        <div class="panel panel-default">
+          <div class="panel-body"><h4>Resistance Clearing</h4>
+          </div>
+          <div class="panel-body">
+            <container><p> Welcome this experience, these longings, these emotions, this advantage as best you can, including ANY resistance to this.</p>
+              <button type="button" class="btn btn-lg  btn-info glyphicon glyphicon-chevron-right pull-right"    data-toggle="collapse" data-target="#SMRC2, #SMRC3"></button>
+              <button type="button" class="btn btn-lg btn-default glyphicon glyphicon-chevron-left pull-left " data-toggle="collapse" data-target="#SMRC1, #SMRC2"></button></container>
+            </div>
+          </div>
+        </div>  
+
+
+
+
+        <div id="SMRC2D" class="collapse">
+          <div class="panel panel-default">
+            <div class="panel-body"><h4>Resistance Clearing</h4>
+            </div>
+            <div class="panel-body">
+              <container><p> Welcome this experience, these longings, these emotions, this disadvantage, as best you can, including ANY resistance to this.</p>
+                <button type="button" class="btn btn-lg  btn-info glyphicon glyphicon-chevron-right pull-right"    data-toggle="collapse" data-target="#SMRC2D, #SMRC3"></button>
+                <button type="button" class="btn btn-lg btn-default glyphicon glyphicon-chevron-left pull-left " data-toggle="collapse" data-target="#SMRC1D, #SMRC2D"></button></container>
+              </div>
+            </div>
+          </div>  
+
+
+          <div id="SMRC3" class="collapse">
+            <div class="panel panel-default">
+              <div class="panel-body"><h4>Resistance Clearing</h4>
+              </div>
+              <div class="panel-body"><container>
+                <p> And could you simply let go of wanting this moment and this experience to be any different then it is, including any resistance to this, as best you can?</p>
+                <button type="button" class="btn btn-lg  btn-info glyphicon glyphicon-chevron-right pull-right"    data-toggle="collapse" data-target="#SMRC3, #SMRC4"></button>
+                <button type="button" class="btn btn-lg btn-default glyphicon glyphicon-chevron-left pull-left " data-toggle="collapse" data-target="#SMRC3, #SMRC2"></button></container>
+              </div>
+            </div>
+          </div>
+
+          <div id="SMRC4" class="collapse">
+            <div class="panel panel-default">
+              <div class="panel-body"><h4>Resistance Clearing</h4>
+              </div>
+              <div class="panel-body"><container><p> Would you be willing to, just for this moment, for the sake of your freedom?</p>
+                <button type="button" class="btn btn-lg  btn-info glyphicon glyphicon-chevron-right pull-right"    data-toggle="collapse" data-target="#SMRC4, #SMRC5"></button>
+                <button type="button" class="btn btn-lg btn-default glyphicon glyphicon-chevron-left pull-left " data-toggle="collapse" data-target="#SMRC3, #SMRC4"></button>
+                <button type="button" class="btn btn-lg btn-default center-block " data-toggle="collapse" data-target="#SMRC4">I already did!</button>
+
+              </container>
+            </div>
+          </div>
+        </div>
+
+        <div id="SMRC5" class="collapse">
+          <div class="panel panel-default">
+            <div class="panel-body"><h4>Resistance Clearing</h4>
+            </div>
+            <div class="panel-body"><container>
+              <p> When?</p>
+              <p> (This is an invitation)</p>
+              <p> </p>
+              <button type="button" class="btn btn-lg  btn-info glyphicon glyphicon-chevron-right pull-right"    data-toggle="collapse" data-target="#SMRC5, #SMRC6"></button>
+              <button type="button" class="btn btn-lg btn-default glyphicon glyphicon-chevron-left pull-left " data-toggle="collapse" data-target="#SMRC4, #SMRC5"></button>
+              <button type="button" class="btn btn-lg btn-default center-block " data-toggle="collapse" data-target="#SMRC5">I already did!</button>
+
+            </container>
+          </div> 
+        </div>
+      </div> 
+
+      <div id="SMRC6" class="collapse">
+        <div class="panel panel-default">
+          <div class="panel-body"><h4>Resistance Clearing</h4>
+          </div>
+          <div class="panel-body"><container><p> When you have let this go as best you can, switch to the next part of the decision maker</p>
+            <button type="button" class="btn btn-lg btn-info pull-right " data-toggle="collapse" data-target="#SMRC6">X</button>
+          </container>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!--  Release Resistance ALONE Part -->
+
+    <!--  Release Resistance ALONE Part -->
+
+
+    <div id="SMRC1R" class="collapse">
+      <div class="panel panel-default">
+        <div class="panel-body">  
+
+
+
+          <button type="button" id="NEXT" class="btn btn-lg  btn-info glyphicon glyphicon-chevron-right pull-right"    data-toggle="collapse" data-target="#SMRC2R, #SMRC1R">        </button>
+
+
+
+
+          <button type="button" id="DONE" class="btn btn-lg btn-default pull-right " data-toggle="collapse" data-target="#SMRC1R">X </button>
+
+          <p><b>Clearing :: </b>Uncover your longings and motivations...</p>
+        </div>
+        <div id="SMRC1RMin" class="collapse-in sedonaSize">
+          <div class="panel-body">
+            <p> 
+              <p> Uncover that which you are longing for, yearning for, desiring, or wanting, both consciously and unconsciously, as best you can.</P> 
+                <h5> <-- Use the Longings list under the experience tab for some fresh ideas</h5>    </p> 
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Being With -->
+        <!--Dealing with Resistance -->
+        <!--Noticing -->
+
+
+        <div id="SMRC2R" class="collapse">
+
+          <div class="panel panel-default">
+            <div class="panel-body">  
+
+
+
+              <button type="button" id="NEXT" class="btn btn-lg  btn-info glyphicon glyphicon-chevron-right pull-right"    data-toggle="collapse" data-target="#SMRC3R, #SMRC2R">        </button>
+
+              <button type="button" id="PREV" class="btn btn-lg  btn-info glyphicon glyphicon-chevron-left pull-right"    data-toggle="collapse" data-target="#SMRC1R, #SMRC2R">        </button>
+
+
+
+
+              <button type="button" id="DONE" class="btn btn-lg btn-default pull-right " data-toggle="collapse" data-target="#SMRC2R">X </button>
+
+              <p><b>Clearing :: </b>Welcome this experience</p>
+            </div>
+            <div id="SMRC2RMin"  class="collapse-in","sedonaSize">
+              <div class="panel-body">
+                <p> 
+                  Welcome this experience, these longings, these emotions as best you can, exactly as they are, including ANY resistance to this.    </p> 
+
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+          <div id="SMRC3R" class="collapse">
+            <div class="panel panel-default">
+              <div class="panel-body">  
+
+
+
+                <button type="button" id="NEXT" class="btn btn-lg  btn-info glyphicon glyphicon-chevron-right pull-right"    data-toggle="collapse" data-target="#SMRC4R, #SMRC3R">        </button>
+
+                <button type="button" id="PREV" class="btn btn-lg  btn-info glyphicon glyphicon-chevron-left pull-right"    data-toggle="collapse" data-target="#SMRC2R, #SMRC3R">        </button>
+
+
+
+
+                <button type="button" id="DONE" class="btn btn-lg btn-default pull-right " data-toggle="collapse" data-target="#SMRC3R">X </button>
+
+                <p><b>Clearing :: </b>Could you let this go?</p>
+              </div>
+              <div id="SMRC3RMin"  class="collapse-in sedonaSize">
+                <div class="panel-body">
+                  <p> 
+                    In regards to wanting this moment to be any different then exactly what it is, could you simply let this go?    </p> 
+
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div id="SMRC4R" class="collapse">
+              <div class="panel panel-default">
+                <div class="panel-body">  
+
+
+
+                  <button type="button" id="NEXT" class="btn btn-lg  btn-info glyphicon glyphicon-chevron-right pull-right"    data-toggle="collapse" data-target="#SMRC5R, #SMRC4R">        </button>
+
+                  <button type="button" id="PREV" class="btn btn-lg  btn-info glyphicon glyphicon-chevron-left pull-right"    data-toggle="collapse" data-target="#SMRC3R, #SMRC4R">        </button>
+
+
+
+
+
+                  <button type="button" id="DONE" class="
+                  btn btn-lg btn-default pull-right " data-toggle="collapse" data-target="#SMRC4R">X </button>
+
+                  <p><b>Clearing :: </b>Would you be willing to?</p>
+                </div>
+                <div id="SMRC4RMin"  class="collapse-in sedonaSize">
+                  <div class="panel-body">
+                    <p> 
+                      Would you be willing to let go of wanting this moment to be any different then it is, just for this moment, for the sake of your freedom,  as best you can?    </p> 
+
+
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+              <div id="SMRC5R" class="collapse">
+                <div class="panel panel-default">
+                  <div class="panel-body">  
+
+
+
+                    <button type="button" id="NEXT" class="btn btn-lg  btn-info glyphicon glyphicon-chevron-right pull-right"    data-toggle="collapse" data-target="#SMRC6R, #SMRC5R">        </button>
+
+                    <button type="button" id="PREV" class="btn btn-lg  btn-info glyphicon glyphicon-chevron-left pull-right"    data-toggle="collapse" data-target="#SMRC4R, #SMRC5R">        </button>
+
+
+                    <button type="button" id="DONE" class="btn btn-lg btn-default pull-right " data-toggle="collapse" data-target="#SMRC5R">X </button>
+
+                    <p><b>Clearing :: </b>When?</p>
+                  </div>
+                  <div id="SMRC5RMin"  class="collapse-in , sedonaSize">
+                    <div class="panel-body">
+                      <p> 
+                        Consider this an invitation.    </p> 
+
+
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+
+                <div id="SMRC6R" class="collapse">
+                  <div class="panel panel-default">
+                    <div class="panel-body">  
+
+
+                      <button type="button" id="AGAIN" class="btn btn-lg btn-default glyphicon glyphicon-refresh pull-right " data-toggle="collapse" data-target="#SMRC6R, #SMRC1R"> </button>
+                      <button type="button" id="DONE" class="btn btn-lg btn-active pull-right " data-toggle="collapse" data-target="#SMRC6R"> X</button>
+
+                      <p><b>Clearing :: </b>Great Work, what is present now?</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!--  Release Resistance ALONE Part -->
+                <!--  Release Resistance ALONE Part -->
+
+
+
+                <!-- Looping -->
+
+
+                <!-- Looping choice point -->
+
+                <div id="LoopingIntro" class="collapse">
+                  <div class="panel panel-default">
+                    <div class="panel-body">
+
+                      <button type="button" class="btn btn-sm btn-default pull-right" data-toggle="collapse" data-target="#LoopingIntro" title="Done">X </button>
+                      <button type="button" class="btn btn-sm btn-default glyphicon glyphicon-chevron-down pull-right" data-toggle="collapse" data-target="#choice" title="Minimize"> </button>
+                      <h3> Looping <h3>
+
+                      </div>
+                      <div id="choice" class="collapse"> 
+                        <div class="panel-body">
+                         <p> 
+                          Looping can be used to clear trauma associated with a particular memory, or to clear fixed attention in the past around a specific  theme or association, such as feeling worthless, abandoned or trapped.  Choose which it is for here:
+                        </p> 
+                        <button type="button" class="btn btn-lg btn-info " data-toggle="collapse" data-target="#memory, #LoopingIntro">Clear a memory</button></container>
+                        <button type="button" class="btn btn-lg btn-info " data-toggle="collapse" data-target="#theme, #LoopingIntro">Clear a theme</button></container>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="memory" class="collapse">
+                  <div class="panel panel-default">
+                    <div class="panel-body"><h4>Looping :: Memory</h4>
+                    </div>
+                    <div class="panel-body">
+
+                      <br>
+                      <p> Looping on a Memory</p> 
+
+                      <p> You are going to bring your attention to this memory and then to the present until the emotional charge and attention fixed to this memory are released.  You will know when you are complete. </p>  
+
+
+                      <button type="button" class="btn btn-sm btn-default pull-right" data-toggle="collapse" data-target="#LoopingIntro" title="Done">X </button>
+                      <button type="button" class="btn btn-sm  btn-info glyphicon glyphicon-chevron-right pull-right"    data-toggle="collapse" data-target="#memory, #Looping1M"></button>
+
+                    </div>
+                  </div>
+                </div>
+
+
+                <!-- Looping theme point -->
+
+                <div id="theme" class="collapse">
+                  <div class="panel panel-default">
+                    <div class="panel-body"><h4>Looping :: Memory</h4>
+                    </div>
+                    <div class="panel-body">
+                      <br>
+
+                      <p> Looping on a Theme</p> 
+
+                      <p> Choose what the theme or association is you want to work on. </p>  
+                      <p> You are going to bring your attention to memories around this theme and then to the present until the emotional charge and attention fixed to this theme are released.  You will know when you are complete. </p>  
+
+                      <button type="button" class="btn btn-lg btn-default pull-right" data-toggle="collapse" data-target="#LoopingIntro" title="Done">X </button>
+                      <button type="button" class="btn btn-lg  btn-info glyphicon glyphicon-chevron-right pull-right"    data-toggle="collapse" data-target="#theme, #Looping1"></button>
+
+                    </div>
+
+                  </div>
+                </div>
+
+                <div id="Looping1" class="collapse">
+                  <div class="panel panel-default">
+                    <div class="panel-body">
+
+                      <button type="button" class="btn btn-lg  btn-info glyphicon glyphicon-chevron-right pull-right"    data-toggle="collapse" data-target="#Looping2, #Looping1">
+                      </button>
+                      <button type="button" class="btn btn-lg  btn-default glyphicon glyphicon-chevron-down pull-right"   data-toggle="collapse" data-target="#Looping1Min">
+                      </button>
+                      <button type="button" class="btn btn-lg btn-default glyphicon glyphicon-chevron-left pull-right " data-toggle="collapse" data-target="#Looping1, #LoopingIntro">
+                      </button>
+                      <p><b>Looping :: </b>Describe the last time you felt this way...</p>
+                    </div>
+                    <div id="Looping1Min">
+
+                      <div class="panel-body">
+                        <p>Current Theme:</p>
+                        <textarea class="form-control input-lg loopInput" type="text" rows="1" id="userInputLoop" placeholder="Select your theme"></textarea>
+                        <br>
+
+
+                        <p> 
+                          Describe the last memory you have where you felt this way until your attention is fully on it. 
+                        </p> 
+
+
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="Looping2" class="collapse">
+                  <div class="panel panel-default">
+                    <div class="panel-body">  
+                      <button type="button" class="btn btn-lg  btn-info glyphicon glyphicon-chevron-right pull-right"    data-toggle="collapse" data-target="#Looping1, #Looping2">        </button>
+
+                      <button type="button" class="btn btn-lg  btn-default glyphicon glyphicon-chevron-down pull-right sedonaMode"   data-toggle="collapse" data-target="#Looping2Min">    </button>
+
+                      <button type="button" class="btn btn-lg btn-default pull-right " data-toggle="collapse" data-target="#Looping2">X </button>
+
+                      <p><b>Looping :: </b>Describe something in the present moment...</p>
+                    </div>
+                    <div id="Looping2Min">
+                      <div class="panel-body">
+                        <p> 
+                          Describe something in the present moment until your attention is all the way on it. 
+                        </p> 
+
+
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <!-- Looping memory point -->
+
+
+
+                <div id="Looping1M" class="collapse">
+                  <div class="panel panel-default">
+                    <div class="panel-body">            
+                      <button type="button" class="btn btn-lg  btn-info glyphicon glyphicon-chevron-right pull-right"    data-toggle="collapse" data-target="#Looping2M, #Looping1M">
+                      </button>
+                      <button type="button" class="btn btn-lg  btn-default glyphicon glyphicon-chevron-down pull-right"   data-toggle="collapse" data-target="#Looping1MMin">
+                      </button>
+                      <h4>Looping</h4>
+                    </div>
+                    <div id="Looping1MMin">
+
+                      <div class="panel-body">
+                        <container>
+                          <p>Current Memory I am working on:</p>
+                          <textarea class="form-control input-lg" type="text" rows="1" id="userInputLoop" placeholder="Select your memory"></textarea>
+                          <br>
+
+
+                          <p> 
+                            Describe this memory until your attention is fully on it. 
+                          </p>  
+                          <p> 
+                          </p> 
+
+                        </container>
+
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="Looping2M" class="collapse">
+                  <div class="panel panel-default">
+                    <div class="panel-body">
+                      <button type="button" class="btn btn-lg  btn-info glyphicon glyphicon-chevron-right pull-right"    data-toggle="collapse" data-target="#Looping1M, #Looping2M">
+                      </button>
+                      <button type="button" class="btn btn-lg btn-default pull-right " data-toggle="collapse" data-target="#Looping2M">X
+                      </button>
+                      <button type="button" class="btn btn-lg  btn-default glyphicon glyphicon-chevron-down pull-right"   data-toggle="collapse" data-target="#Looping2MMin">
+                      </button>
+                      <h4>Looping</h4>
+                    </div>
+                    <div id="Looping2MMin">
+
+                      <div class="panel-body">
+                        <p> 
+                          Describe something in the present moment until your attention is all the way on it. 
+                        </p> 
+
+
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!--End Looping -->
+
+
+
+
+
+                <!--Begin #Wanting for -->
+
+                <div id="WF1" class="collapse">
+                  <div class="panel panel-default">
+                    <div class="panel-body">
+                     <button type="button" class="btn btn-sm btn-default glyphicon glyphicon-remove pull-right" data-toggle="collapse" data-target="#WF1" </button>
+                      <button type="button" class="btn btn-sm btn-default glyphicon glyphicon-chevron-down pull-right" data-toggle="collapse" data-target="#wantingForProcess" title="Minimize"> </button>    
+                      <h3>The 'Wanting For' Process</h3> 
+                    </div>
+                    <div class="panel-body collapse" id="wantingForProcess"> 
+                      <p> This process is designed to trigger insight and compassion around any tension you have in relating with a specific other person. </p>
+                      <p> It can also be used in relation to a self aspect in psychosynthesis practice (e.g. Gestalt)</p>
+                      <button type="button" class="btn btn-sm btn-info glyphicon glyphicon-chevron-right pull-right "    data-toggle="collapse" data-target="#WF1, #WF2" onclick='setText("What" + " " + "actually" + " " + "happened" + " " + "is"+" ")'>   </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="WF2" class="collapse">
+
+                  <div class="panel panel-default">
+                    <div class="panel-body">
+                      <button type="button" class="btn btn-sm btn-default glyphicon glyphicon-remove pull-right"    data-toggle="collapse" data-target="#WF2" >         </button>
+
+
+                      <h4>The 'Wanting For' Process</h4>
+                    </div>
+                    <div class="panel-body">                                  <p> What is the data? </p>
+                      <p> (What actually happened, or what is unarguable about the situation?)</p>
+                      <button type="button" class="btn btn-sm  btn-info glyphicon glyphicon-chevron-right pull-right"    data-toggle="collapse" data-target="#WF2, #WF3" onclick='setText("To" + " " + "me," + " " + "this" + " " + "means" + " "+"that" + " " )'></button>
+                      <button type="button" class="btn btn-sm btn-default glyphicon glyphicon-chevron-left pull-left " data-toggle="collapse" data-target="#WF1, #WF2"></button>
+
+                    </div>
+                  </div>
+                </div>
+
+                <div id="WF3" class="collapse">
+
+                  <div class="panel panel-default">
+                    <div class="panel-body">
+                      <button type="button" class="btn btn-sm btn-default glyphicon glyphicon-remove pull-right "    data-toggle="collapse" data-target="#WF3"> </button>
+
+                      <h4>The 'Wanting For' Process</h4>
+                    </div>
+                    <div class="panel-body">                                   <p> What is the interpretation? </p>
+                      <p> What does it mean to you?  Consider the situation, what meaning do you make of it?</p>
+                      <button type="button" class="btn btn-sm  btn-info glyphicon glyphicon-chevron-right pull-right"    data-toggle="collapse" data-target="#WF3, #WF4" onclick='setText("I" + " " + "judge" + " " + "them" + " " + "to" + " "+"be" + " " )'></button>
+                      <button type="button" class="btn btn-sm btn-default glyphicon glyphicon-chevron-left pull-left " data-toggle="collapse" data-target="#WF2, #WF3"></button>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div id="WF4" class="collapse">
+
+                  <div class="panel panel-default">
+                    <div class="panel-body">
+                      <button type="button" class="btn btn-sm btn-default glyphicon glyphicon-remove pull-right "    data-toggle="collapse" data-target="#WF4" ></button>
+
+                      <h4>The 'Wanting For' Process</h4>
+                    </div>
+                    <div class="panel-body">                            <p> What is your judgement of this person? </p>
+                      <p> If you are not feeling judgemental, connect to a part of yourself which is willing to feel judgemental and continue.</p>
+                      <button type="button" class="btn btn-sm  btn-info glyphicon glyphicon-chevron-right pull-right"    data-toggle="collapse" data-target="#WF4, #WF5" onclick='setText("I" + " " + "_____" + " " + "take" + " " + "to" + " "+"myself" + " "+"these"+" " + "judgements"+" " )'></button>
+                      <button type="button" class="btn btn-sm btn-default glyphicon glyphicon-chevron-left pull-left " data-toggle="collapse" data-target="#WF3, #WF4"></button></div>
+
+                    </div>
+                  </div>
+                  <div id="WF5" class="collapse">
+
+                    <div class="panel panel-default">
+                      <div class="panel-body">  
+                        <button type="button" class="btn btn-sm btn-default glyphicon glyphicon-remove pull-right "    data-toggle="collapse" data-target="#WF5" ></button>
+                        <h4>The 'Wanting For' Process</h4>
+                      </div>
+                      <div class="panel-body">                                    <p> Imagine this person is a mirror.</p>
+                        <p> Will you OWN these judgements as judgements of yourself?</p>
+                        <p> Will you take these judgements back from them?</p>
+                        <button type="button" class="btn btn-sm  btn-info glyphicon glyphicon-chevron-right pull-right"  onclick='setText("I" + " " + "want" + " " + "for" + " " + "them" + " "+"to" + " ")'   data-toggle="collapse" data-target="#WF5, #WF6"></button>
+                        <button type="button" class="btn btn-sm btn-default glyphicon glyphicon-chevron-left pull-left " data-toggle="collapse" data-target="#WF4, #WF5"></button></div>
+                      </div>
+                    </div>
+                    <div id="WF6" class="collapse">
+
+                      <div class="panel panel-default">
+                        <div class="panel-body">
+                          <button type="button" class="btn btn-sm btn-default glyphicon glyphicon-remove pull-right "    data-toggle="collapse" data-target="#WF6"> </button>
+
+                          <h4>The 'Wanting For' Process</h4>
+                        </div>
+                        <div class="panel-body"> 
+                          <p> What do you want FOR them? </p>
+                          <button type="button" class="btn btn-sm  btn-info glyphicon glyphicon-chevron-right pull-right" onclick='setText("I" + " " + "want" + " " + "for" + " " + "me" + " "+"to" + " ")'    data-toggle="collapse" data-target="#WF6, #WF7"></button>
+                          <button type="button" class="btn btn-sm btn-default glyphicon glyphicon-chevron-left pull-left " data-toggle="collapse" data-target="#WF5, #WF6"></button></div> </div>
+                        </div>
+
+                        <div id="WF7" class="collapse">
+
+                          <div class="panel panel-default">
+                            <div class="panel-body">
+                              <button type="button" class="btn btn-sm btn-default glyphicon glyphicon-remove pull-right "    data-toggle="collapse" data-target="#WF7"> </button><h4>The 'Wanting For' Process</h4>
+                            </div>
+                            <div class="panel-body">  <p> What do you want FOR yourself? </p>
+                              <button type="button" class="btn btn-sm  btn-info glyphicon glyphicon-chevron-right pull-right"    data-toggle="collapse" data-target="#WF7, #WF8" onclick='setText("I" + " " + "want" + " " + "for" + " " + "us" + " "+"to" + " ")' ></button>
+                              <button type="button" class="btn btn-sm btn-default glyphicon glyphicon-chevron-left pull-left " data-toggle="collapse" data-target="#WF6, #WF7"></button></div>
+                            </div>
+                          </div>
+
+                          <div id="WF8" class="collapse">
+
+                            <div class="panel panel-default">
+                              <div class="panel-body">
+
+                                <h4>The 'Wanting For' Process</h4>
+                              </div>
+                              <div class="panel-body">      <p> What do you want FOR how you two relate? </p>
+                                <button type="button" class="btn btn-sm pull-right  btn-info glyphicon glyphicon-ok"    data-toggle="collapse" data-target="#WF8"></button>
+                              </div>
+                            </div>
+                          </div>
+
+
+                          <!--End #Wanting for -->
+
+
+                          <!-- BEGIN Welcoming Challenge -->
+
+                          <div id="WelcomingChallenge" class="collapse">
+                            <div class="panel panel-default">
+                              <div class="panel-body">
+
+
+                                <button type="button" id="MIN" style="display:hidden"  class="btn btn-sm  btn-default glyphicon glyphicon-chevron-down pull-right inDevelopment"   data-toggle="collapse" data-target="#WelcomingChallengeMain">    </button>
+
+
+                                <button type="button" id="DONE" class="btn btn-sm btn-default pull-right " data-toggle="collapse" data-target="#WelcomingChallenge">X </button>
+
+
+                                <p><b>Welcoming Challenge :: </b></p>
+                              </div>
+                              <div class="panel-body collapse" id="WelcomingChallengeMain">
+
+                                <p>What is challenging for you right now?</p>
+                                <textarea class="form-control input-lg" type="text" rows="2" id="challenge" default-Value="I" ></textarea>
+                                <p>What opportunity is there within this challenge?</p> 
+                                <textarea class="form-control input-lg" type="text" rows="2" id="challengeOpportunity"></textarea>
+                                <p>What can you appreciate about this challenge?</p>     
+                                <textarea class="form-control input-lg" type="text" rows="2" id="challengeAppreciation"></textarea>
+                                <p>How willing are you to welcome this challenge?</p>
+                                <textarea class="form-control input-lg" type="text" rows="2" id="challengeWill"></textarea>
+                                <input type='text' class="btn btn-info active" onclick='changeTextU()' value='Add to Journal'/>
+
+
+                              </div>
+                            </div>
+                          </div>
+
+
+                          <!-- END Welcoming Challenge -->
+
+
+
+                          <!--Going Forward Section-->
+
+
+
+                          <div id="SMDMGF" class="collapse">
+                            <p> This process is complete when you are satisfied with the degree of clarity you have around making your decision.</p>
+                            <p> The next step is to look again at Option 1 and to continue from there through the sequence in this decision maker until you feel complete</p>
+                            <p> Alternatively you are welcome to explore how other methods might complement this one on your own</p>
+                          </div>
+
+
+
+                          <div id="NI" class="collapse">
+                            <p> Allow yourself to take in the full range of your immediate experience and simply notice what it is that you notice...</p> 
+                          </div>
+
+
+
+
+
+
+
+                          <div class ="collapse-in journal" >
+
+                           <div id="journalIntro" class="collapse">
+                             <div class="panel-body">
+                              <p> Welcome!   Start by journaling freely.  If your not sure where to begin, describe your experience.  </p> <p>  Then, regularly, pause to reflect upon your experience.  (This develops your self-reflexive muscles).  Open the sensations and emotions tabs on the left and contrast your experience with the list to discover a wider range of what its like to be you.  Tap the buttons that represent how your feeling to drop them into your journal.  </p> <p>  Go back to writing, accounting for what you have discovered. </p> <p>   Then, see what is motivating you to feel the way you feel, or see the way you see, by checking out the longings tab. Same deal, tap what you recognize. </p> <p>   Finally... choose HOW you want to relate to what is real right now... get some ideas and customize your experience with the 'relate to it' menu.  This is the core of this practice!  All else is complementary... explore the other processes to deepen your experience and awareness further... enjoy!            
+                            </p>      
+                          </div>
+                        </div>
+
+                        <div class="panel panel-default collapse" id="jMain">
+
+                          <div class="panel-body">
+                            <h3>Journal
+                              <button type="button" class="btn btn-sm btn-default pull-right hideThis3rd" title="Done"> </button>
+                              <button type="button" title="info" class="btn btn-sm btn-active glyphicon glyphicon-info-sign pull-right " data-toggle="collapse" data-target="#journalIntro">X </button><h3>
+                            </div>
+
+                            <div class="panel-body" id="jb" class="collapse">
+
+                              <div id="journal" class="panel-body viewZone" >
+                              </div>
+
+
+                              <textarea class="form-control input-lg journalInput" autocomplete="off" type="text" rows="3" id="userInput" ng-model="name"></textarea>
+
+                              <Button type="submit" class="btn btn-info btn-lg" onclick='changeTextComment7("userInput","journal", "none")'>Add to Journal</Button>
+
+
+                            </div>
+
+                          </div>
+                        </div>
+
+
+
+
+
+                      </div>
+
+
+
+
+
+
+                      <div id="journal">
+                        <!-- #Journal Dump Location HERE ******-->    <p></p>
+
+                      </div>
+
+
+
+                    </div>
+                  </div>
+
+
+
+
+
+                </div> 
+              </div> 
+
+            </div class="jumbotron" id = "jt">
+
+
+          </div> 
+        </div> 
+
+
+        <!--  @Intro Begin -->
+
+        <script>
+        $(document).ready(function(){
+          $('.toggleNext').click(function(){
+            $(this).next().slideToggle();
+
+          });
+        });
+        </script>
+        <style>
+
+        .introFormat{
+
+
+        }
+
+        a:link {
+          color:#000000;
+          background-color:transparent;
+          text-decoration:none;
+        }
+        a:visited {
+          color:#000000;
+          background-color:transparent;
+          text-decoration:none;
+        }
+        a:hover {
+          color:#000000;
+          background-color:transparent;
+          text-decoration:underline;
+        }
+        a:active {
+          color:#000000;
+          background-color:transparent;
+          text-decoration:underline;
+        }
+
+        </style>
+
+
+        <div id="introMain0" class="collapse jumbotron">
+          <div class="container-fluid"  style="padding:20px;">
+
+
+
+
+
+            <a href="#" class="introFormat toggleNext"><h3>A Personal Introduction (w/Video)</h3></a>
+            <div class='collapse panel-body detail'> 
+
+
+              <p>Tony Robbins once said something along the lines that you can achieve anything if you focus all of your resources, brilliance, attention and will towards it.  I felt inspiration and doubt both in considering this view.</p><br>
+              <p>"What if I wanted to fly?"<br><br>  This was my first thought.  I cannot fly.  While in a lucid dream, this is my first choice, but in waking life, I cannot fly.</p>
+              <p>Today, as I write these words, I am in awe in recognition that I was wrong.</p>
+              <p>  <br><i>I can fly.</i></p><br>
+
+
+              <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/Czy0pXRRZcs" frameborder="0" allowfullscreen></iframe>-->
+
+
+              <p> Last week I was sharing drinks with friends (a very rare occassion), and someone busted out the NYTimes article "To fall in love with anyone, do this".  I started reading the questions and immediately said "Lets all answer these!".<p><br>
+                <p> One of the questions was "What is your idea of a perfect day"?</p><br>
+                <p> While I desperately wanted to say it was the actualization of my fleeting taste of a worldcentric creative impulse; (how I could give my unique gift to humanity and leave a legacy which uplifts the world), what was most alive for me was this:  "I want to jump out of an airplane in a bat-suit and fly with my soulmate by my side".<p><br>
+                  <p> There was WAY more vitality and aliveness in me as I expressed this then I had for my desire to leave a legacy.  I felt shame in recognizing this, because my experience was so different then my intent, and my whole being yearns deeply for integrity with its chosen trajectory. For me, this was evidence of my lack of moral developement, as I aspire to have my gift for the world be the most vital dedication of my life that I can express.</p><br>
+                  <p> As I reflected this to a friend she suggested that the two might actually complement each other.  I shuddered with recognition, and the Koan "what is the sound of one hand clapping" came to mind.  Of course!  The intersection of these two aspirations: the yearnings of my self for the ultimate experience of freedom and the yearnings of my essential nature to give my deepest gift... one hand clapping does not make a sound, but when two hands clap something emerges... a sound which is not possible with each independently.  </p><br>
+                  <p> How could my passionate yearning to fly be complementary to my desire to connect intimately with my worldcentric creative impulse?  My desire to give my gift fully to you and the world in a way that grows beyond me, beyond the scope of my life, uplifting humanity at large in perpetuity?</p><br>
+                  <p> All this said, this project is the closest possible expression I can must for how I might leave my legacy.  I aim to stand on the shoulders of giants, those humans who have taught humanity unique approaches to recognizing, uncovering and actualizing latent potential in distinct ways.  On one hand I want to automate those processes so that you can learn them experientially, but on another hand I want to apply everything I have studied to date via Integral Theory in order to reveal, through your experience, how these tools complement each other.  And, ideally, I want to provide you an experiential taste of all of this.  While the theoretical foundations can be nourishing to the mind, I find that life experience is what has fundamentally transformed the way I see, experience and live my life even more so then the ways that I have learned to see.  </p><br>
+                  <p> Each of the tools I present to you has a theoretical foundation, and over time I will add links so that when you find something that moves you to the core, you can investigate the foundations which have given form to these practices.</p><br>
+                  <p> My promise to you in this moment is this:  I will show you how to turn all of the resources that I have found relevant in overcoming obstacles to actualizing human potential towards one particular aim at a time, such that you can more effortlessly focalize your attention and creative powers to actualizing any dream you set out to dream.  </p><br>
+                  <p> I will stop there, however, as I am going to also let you take full creative freedom in HOW you go about engaging the universe you contain within as you set out to dream, to actualize your dreams, and to become a self reflexive human being.  </p><br>
+                  <p> I am going to show you how to apply all of these tools to your intentions, your visions, your dreams, to that which inspires you, to what you appreciate about being alive, to the questions you choose to sit with as you move through life, to the insights that emerge through being with the questions, to the goals you set for yourself, to the habits you choose to engage and commit to along the path to living your aspirations and actualizing your goals, to the challenges you face in confronting your fears and participating more fully in being alive, to the decisions you must make that cause you to take pause and engage your capacity for discernment and even to the projections that your mind makes up about yourself and other people which provide a rabbit hole into insight about your most direct path to becoming a more whole, more integrated, more congruent and more coherent expression of the very humanity you hold which makes explicit your interconnection with all other humans alive in this tremendous moment of our worlds history. </p><br>
+                  <p> This is the minimum of what I am going to give you in my life, and this app stands already as evidence that it is possible.  Going beyond this, I am unwilling to be satisfied by the idea of coaching you in a an automated fashion through technology.  Its simply not enough.  I am using this app's practices on myself every day and it is, pure and simple, not enough.  I am going to teach you as best I possibly can how to coach yourself, how to customize your practice, how to integrate it so that I become obsolete, so that this app becomes obsolete, so that even opening your computer becomes obsolete, by crafting a practice with you, for you, in your style, that turns the new nueral pathways we create together into nueral highways, which makes your practice an autopilot practice. </p><br>
+                  <p> If this was enough perhaps I would be satisfied, but unfortunately even this is not enough to have me feel as though I am fully giving my gift.  So, I am going to take this at least one step further.  At the right moment, I am going to show you how to bring these practices and ways of relating into every conversation you choose.  I want you to have the choice, at any moment, in any relationship, to allow the subtle interconnectivity between you and another be made explicit.  I want you to grow into a radical receptivity of the reflection your relating offers, so that by relating alone, that which was obscure about your being becomes highlighted in a safe, gentle fashion, such that you can even more so allow yourself to soften into your own essential freedom, harmony, safety, brilliance, generosity, compassion, insight and humanity. </p><br>
+                  <p>This may be enough to satiate my desire to give my gift... but I don't want you to take my word for it, that its possible for you to dream big and actually succeed at actualizing your dreams, so I am going to show you its possible.  Today, with $5 in the bank and $2 in my pocket, I am choosing to fly.  I want you to watch me make this dream happen, and as you see me moving towards its actualization, I want you to let yourself dream a little bit bigger.  Every step I take towards flying, I want you to take a step towards dreaming bigger.  And when I take flight, I want you to step up to the plate and take flight in your dreams.  </p>
+                </div>
+
+
+
+
+
+
+                <a href="#" class="introFormat"><h3>Connect to the Moment</h3></a>
+
+                <a href="#" class="introFormat toggleNext"><h4>Journaling that inspires</h4></a>
+                <div class='collapse panel-body detail'> 
+                  <p>If you like to journal about your experience being alive, this can help you discover more depth in your writings. </p><br>
+                  <p><b>Dedication:</b></p>
+                  <p>Cultivating a deepening intimacy with the qualities and the textures of the immediate experience may create a deeper connection to the intrinsic nature of your experience of joy, inspiration, peacefulness... over time. </p><br>
+                  <p><b>Method:</b></p>
+                  <p>Create a new journal entry, open the sensations or emotions list, contrast the list to your experience, and add to the journal a bit about your experience.</p><br>
+                </div>
+
+
+                <a href="#" class="introFormat toggleNext"><h4>Cultivate Self Reflexivity</h4></a>
+                <div class="collapse panel-body detail">
+                  <p>Most of the coaching, counseling and self reflexivity methods that this tool will introduce you to pivot upon self-reflexivity; the process of becoming self aware or of accounting for the quality of your inner world.  Since much of the human experience can lie under the field of what we are conscious of, you may find that contrasting your experience to lists of common longings, yearnings, or desires could reveal to you more of the full range of what is alive within.</p><br>
+                  <p><b>Method:</b></p>
+                  <p>Create a new journal entry, open the impulses or longings  list, contrast the list to your experience, and add to the journal a bit about more about these elements of your experience.</p><br>
+                </div>
+
+
+                <a href="#" class="introFormat toggleNext"><h3>Relate to the Moment</h3></a>
+
+                <div class='collapse panel-body detail'><p>To the degree to which you are aware of and accounting for the vast range of your lived experience, you can engage it, participate in it and relate to it.  </p><br><br>
+                  <p>If you hire a coach or therapist, they will guide you to do so in a style they are familiar with, whereas here, you have full control... you decide, weave together, integrate and sythesize the ways of relating to what is, as a whole that most resonate with you, with your style, with your sense of calling, with how you like to grow.  </p><br><br>
+                  <p>Eventually this app will become intelligent, like Pandora is for your music styles, in evolving with your particular style of growth... but for now, using the 'relate to it' tab you will choose the ways in which you want to explore the moment, and the app will add these to your practice as a reminder. </p>  
+                </div>
+
+                <a href="#" class="introFormat toggleNext"><h3>Process whats here</h3></a>
+
+
+                <p  class='collapse'>This tool contains processes designed forge new nueral patterns in your mind, translating a novel journaling experience into automatic responses to what is, ushering in resiliance, competence, emotional intelligence and a more adaptive self, and to address most of the types of circumstances one would seek personal development practice around... to systemetize and integrate some of the worlds most relevant practices, and to make them so customizeable, that your process of discovering your own unique path to actualizing the latent potential of your unique calling is unavoidable! </p>
+
+
+
+                <a href="#" class="introFormat toggleNext"><h4>The Sedona Method</h4></a>
+                <div class='collapse panel-body detail'>
+                  <p>The Sedona Method Resistance Clearing Process will guide you through a cycle of noticing what is present in your experience, welcoming it as it is, identifying any resistance to this, welcoming that as well, and then letting go of the desire that what is be any different then it is.</p><br><br>
+                  <p>The Sedona Method Decision maker tool will guide you through considering different options for yourself, identifying unconscious motivational factors at play, and then working with those now-conscious motivators intentionally via a process similar to the above. <br><br>
+                    <p>Simple Journaling combined with the Clearing Process can reveal layer after layer of our inner worlds which would otherwise remain in the auspices of the unconscious mind. 
+                    </div>
+
+
+
+                    <a href="#" class="introFormat toggleNext"><h4>The Immunity to Change Coaching Method</h4></a>
+                    <div class='collapse panel-body detail'>
+                      <p>The Immunity to Change Coaching Method is designed to help you discover unconscious motivators inhibiting making behavioral changes you may otherwise aspire to accomplish.</p><br><br>
+                      <p>This is in its infancy, but may be actually very useful as it is!. I hope to build out and take this particular tool alot further... it is the brainchild of Robert Kegan at Harvard.</p>
+                    </div>
+
+                    <a href="#" class="introFormat toggleNext"><h4>Appreciative Inquiry</h4></a>
+                    <div class='collapse panel-body detail'>
+                      <p>Appreciative Inquiry is a practice commonly utilized to explore the quality of appreciation and how it affects an individual or group perspective.</p><br><br>
+                      <p>This is another tool that I wish I understood more, but since I wanted to be able to apply other tools to the overarching aim of cultivating deep, unshakeable gratitude for who we are, what we already have and where we are in life I created a mode for this as well. </p><br>
+                    </div>
+
+
+                    <a href="#" class="introFormat toggleNext"><h4>2nd Person Inquiry</h4></a>
+                    <div class='collapse panel-body detail'>
+                      <p>2nd Person Inquiry is an overarching concept which enfolds Shadow Integration (or psycho-synthesis), Gestalt and many other practices.  <br><br>The actual application of 2nd Person inquiry draws from a wide range of approaches and is probably best understood through the examples.  <br><br>Anytime you have a conversation with your anger, or your inspiration, and speak on behalf of yourself and your anger, switching perspectives at each sentence, for example, your in a 2nd person inquiry.  <br><br>Simply asking yourself questions and then answering from a unique vantage point is another.  This will likely make more sense in practice.</p><br>
+                    </div>
+
+
+
+                    <a href="#" class="introFormat toggleNext"><h4>Work with Goals</h4></a>
+                    <div class='collapse panel-body detail'>
+                      <p>Explore processes for working with goals.  What does it take to clear obstacles, both conscious and unconscious, in the way of actualizing our goals?  This frame is dedicated to exploring that.</p><br>
+                    </div>
+
+
+
+                    <a href="#" class="introFormat toggleNext"><h4>Decision Maker</h4></a>
+                    <div class='collapse panel-body detail'>
+                      <p>This is designed to uncover and clear unconscious obstacles to your clarity around any decision, and is calibrated to use the Sedona Method Initially.  <br><br>It will evolve to include customized approaces or simple variance in styles.  There is also a slighly more nuanced version of this which is not currently set up. </p><br>
+                    </div>
+
+
+                    <a href="#" class="introFormat toggleNext"><h4>Custom Practice</h4></a>
+                    <div class='collapse panel-body detail'>
+                      <p>This tool is moving closer and closer to becoming a space wherein you can craft your own unique Integrated Life Practice, or Integral Life Practice, for Actualizing the latent raw potential of your unique existance and brilliance, and the Custom practice tab is simply a taste of some of the functions that are to come. <br><br>Its a prototype and a teaser...  </p><br>
+                    </div>
+
+
+
+                    <a href="#" class="introFormat toggleNext"><h3>Inspiration and Influences</h3></a>
+                    <div class='collapse panel-body detail'>
+                      <p>There are many influences which inspire this particular tool, as it is designed to be an expression of Applied Integral Theory; Ken Wilber's Body of work, in that it is moving towards being a sactuary for the part of the mind which is unwilling to close its eyes to the radically revealing nature of inclusivity in regards to perspectives, or vantage points, on the nature of our own existance.  <br><br>In other words, its here for minds unwilling to close, or at least curious about the potential that unique perspectives have to complement each other.  <br><br>For those to whom this makes no sense, it will still serve as a platform for the process of self-discover and the actualization of the unique brilliance and potential we each hold... and eventually, the ways in which this tool demonstrates, by example, the complementary nature of otherwise apparently disparate ways of seeing, will soften the exclusivity claim of our diverse vantage points on existance; making space for a wider embrace of each other, of diversity... a wider sense of inclusivity and honor for the differences we each bring to the world. </p><br>
+                    </div>
+
+
+                    <a href="#" class="introFormat toggleNext"><h4>Ken Wilber</h4></a>
+                    <div class='collapse panel-body detail'>
+                      <p>Ken Wilber's Applied Integral Theory is probably the single most significant influence on this project, as indicated in the summary above<br></p>
+                    </div>
+
+                    <a href="#" class="introFormat toggleNext"><h4>The Enneagram</h4></a>
+                    <div class='collapse panel-body detail'>
+                      <p>While the Sedona Method brings a clear map to oriented towards and relating to unconscious motivators and influences, the Enneagram expands that map with a detailed summation of patterns which tend to run unsconsciously, motivating human behavior and obscuring the fullness of our capacity to be aware.<br><br> This tool pulls from these patterns in much the same way as it would via the Sedona Method Patterns, and enables our choice around how we want to relate to them.  This models the pattern of psychosythesis, or shadow integration from Jungian Psychology. </p>
+                    </div>
+
+                    <a href="#" class="introFormat toggleNext"><h4>Compassionate Communication</h4></a>
+                    <div class='collapse panel-body detail'>
+                      <p>One of the original influences to this work!  NVC or compassionate communication teaches individuals to recognize the connections between emotion and circumstance, between longings/values and emotions, and to reveal these connections as an invitation to others to create together an experience of deeper connection or to evoke a behavioral shift. <br><br>I struggled when a group agreed they could not 'feel' me, and I realized I wanted to be more connected to and aware of my emotional state... which was one of the first reasons I started building this app.. which now reveals over time the emotional texture underlying my experiences, the values underlying those emotional states and more.</p>
+                    </div>
+
+                    <a href="#" class="introFormat toggleNext"><h4>Avatar</h4></a>
+                    <div class='collapse panel-body detail'>
+                      <p>The Avatar Lineage of self inquiry, which I do not recall many details of, does teach a practice they call 'releasing fixed attention,' and which I have lovingly begun calling 'looping'. <br><br>Looping can be used to address trauma or patterns that are deeply fixed... it may be helpful for addressing some of the deeper ways in which we are stuck or fixed in outdated patterns.  More to come. </p>
+                    </div>
+
+
+                    <a href="#" class="introFormat toggleNext"><h4>The Mankind Project</h4></a>
+                    <div class='collapse panel-body detail'>
+                      <p>Just one practice so far is inspired by the Mankind Project; the 'wanting for' practice, which is designed to be applied to a relationship where struggle exists, to cultivate clarity, self authorship and compassion. More info to come</p>
+                    </div>
+
+
+
+                    <a href="#" class="introFormat toggleNext"><h3>Applications</h3></a>
+                    <div class='collapse panel-body detail'>
+                      <p>The applications of these tools is where creating this really brings it to life for me... its overwhelming, in a good way, the sense of inspiration that flows through me just imagining all of the relevant applications of each of these tools, and of the sythesis of them... I remember once hearing Tony Robbins say that if you turn all of your tools, resources and attention towards one single focal point, that like a laser beam you could burn through any obstacle... that is truly what comes up for me around building this tool, and it is truly, such a powerful field of possibility that I find myself having earnestly hungering to build and release this incredible tool.</p>
+                    </div>
+
+                    <a href="#" class="introFormat toggleNext"><h4>Creating Profound Connection in Day to Day Conversations</h4></a>
+                    <div class='collapse panel-body detail'>
+                      <p>This is perhaps the initiating intent of the Integral Center's trainings in Circling in Boulder Co, and the basic premises I was able to glean in 6 months of training there are built into the foundation of this practice and toolset. <br>Presence with the immediate experience. <br>Disclosure of what is arising. <br>Recognizing the impact of the presence of another.  <br>Tracking what feels alive in the moment. <br>Cultivating radical curiousity. <br>Communicating in ways which foster these qualities or overarching intentions.  <br> These ways of practicing communication are primarily currently built into the 2nd Person Inquiry tool... you can practice them while relating to any 2nd person practice, and then bring them into your real life more fully when complete.</p>
+                    </div>
+
+
+                    <a href="#" class="introFormat toggleNext"><h4>Appreciating more and more fully every day who we are, what we have, where we are at.</h4></a>
+                    <div class='collapse panel-body detail'>
+                      <p>Another really, really inspiring application of these tools involves connecting to a deep ground of appreciation for what already is.  So far, the most clear application of this is to simply name what we can appreciate (which the appreciation tool will log for us), and then to apply either the Sedona Method to it by identifying unconscious desires which underlie what we are appreciating and then relate to those either with the Sedona Method or a custom chosen/crafted way of relating to them, and then to return to the first step and repeat.</p>
+                    </div>
+
+                    <a href="#" class="introFormat toggleNext"><h4>Identifying and Clearing Obstacles to Achieving our Goals</h4></a>
+                    <div class='collapse panel-body detail'>
+                      <p>One of what I imagine will be the most relevant applications of this tool to the wider value - set of humanity as we are lies right here.  Imagining the goal complete and then imagining failure or changing the goal, giving up or moving on is one of the clearest options for exploring how the tool can apply here.<br> Also, applying the Immunity to Change Coaching method to begin working with any behavior we might need to change to actualize the goal can be profound for revealing unconscious blocks. <br>Looping can help with clearing those blocks.  <br>Dedicating our goals, clarifying our aims, clarifying our next milestone, checking in on our progress, clarifying our degree of integrity with our aim, updating our status in moving towards the aim, clarifying our degree of commitment to being in integrity with our aim, these are all elements which may prove evocative, clarifying, revealing or pivotal for different folks in working towards our goals, and thus they are all built into the goal section. </p>
+                    </div>
+
+                    <a href="#" class="introFormat toggleNext"><h3>FAQ</h3></a>
+                    <div class='collapse panel-body detail'>
+                      <a href="#" class="introFormat toggleNext"><h4>what is public, what is private here?</h3></a>
+                      <div class='collapse panel-body detail'>
+                       <p>Everything you type is private to your machine.  At some point there will be the option of sharing elements of what you are experiencing with others, but that will not be a surprise, it will be clear and a new function, not ever disclosure of what you enter into the system now. </p>
+                     </div>
+                     <a href="#" class="introFormat toggleNext"><h4>What will it remember, what will it forget?</h3></a>
+                     <div class='collapse panel-body detail'>
+                       <p>There are only a couple things the app is designed to remeber at present, your top 3 goals, for example, and your dedication of your life, the next 3 months or your practice.  More will be included over time, but you will be notified about it as it happens. </p>
+                     </div>
+
+
+                   </div>
+
+                   <a href="#" class="introFormat toggleNext"><h4>Are there any keyboard shortcuts?</h3></a>
+                   <div class='collapse panel-body detail'>
+                     <p>Just Control + S so far, which opens and closes the experience tab</p>
+                   </div>
+
+
+                 </div>
+                 <a href="#" class="introFormat toggleNext"><h3>So much more to come</h3></a>
+                 <div class='collapse panel-body detail'>
+                  <p>I am inexplicably inspired to share more and deepen this more for you all, thank you dearly for participating in this project with me.  </p>
+                </div>
+
+
+
+
+
+              </div>
+
+
+
+
+              <!--  #Intro Collapse function close -->
+
+            </div>
+          </div>
+
+
+          <!--  #Intro END -->
+
+
+        </body>
+        </html>

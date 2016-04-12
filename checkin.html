@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+
+<!--  <html manifest="demo.appcache"> experiment for app caching via http://www.w3schools.com/html/html5_app_cache.asp 
+-->
+<html>
+
+
+
+
+
+
+<head>
+
+  <title >Integral Inquiry</title>
+  <meta charset="utf-8">
+
+
+  <!-- *** local files for testing *** -->
+  <script src="jquery-1.11.2.js"></script>
+  <script src="checkIn.js"></script>
+  <script src="angular.min.js"></script>
+  <div ng-app="" class="test2">
+    <script src="bootstrap.min.js"></script>      
+    <link rel="stylesheet" href="bootstrap-theme.min.css">     
+    <link rel="stylesheet" href="bootstrap.min.css">   
+    <link rel="stylesheet" href="checkin.css">   
+
+
+  </head>
+
+  <body style="background-color:black;">
+    <div class="mainCheckInArea panel-body panel">
+
+
+      <div class="container">
+
+        <div class="row">
+          <div class="col-sm-6 panel-area">
+
+
+            <h4> Check In Here <h4>
+              <!-- create scrolling area -->
+              <div id="coachingArea">
+
+                  <h4> Choose your focus <h4>
+                   <textarea label="focus"class="form-control input-lg focusLog" autocomplete="on" type="text" rows="1" id=""  ng-model="focus" text="This Moment" placeholder="What are you focused on?">This Moment</textarea>
+
+                   <h6 class="pull-right guidance"> Press Enter at any point to add to your log </h6>
+
+
+                   <textarea class="form-control input-lg statusLog" autocomplete="off" type="text" rows="1" id=""  placeholder="Progress check in on?"></textarea>
+                   <textarea class="form-control input-lg ideaLog" autocomplete="off" type="text" rows="1" id=""  placeholder="New Ideas?"></textarea>
+                   <textarea label="challenges"class="form-control input-lg challengeLog" autocomplete="off" type="text" rows="1" id=""  ng-model="challenges" placeholder="New Challenges?"></textarea>
+                   <textarea class="form-control input-lg timeLog" autocomplete="off" type="text" rows="1" id=""  placeholder="Time Spent on something?"></textarea>
+                   <textarea class="form-control input-lg alivenessLog" autocomplete="off" type="text" rows="1" id=""  placeholder="Something in particular alive for you right now??"></textarea>
+                   <textarea class="form-control input-lg newDesireLog" autocomplete="off" type="text" rows="1" id=""  placeholder="Something you are wanting from this?"></textarea>
+                   <textarea class="form-control input-lg stateLog" autocomplete="off" type="text" rows="1" id=""  placeholder="Your state of consciousness?"></textarea>
+                   <h6 class="pull-right guidance"> At any point reflect on your experience here </h6>
+
+                   <textarea id="lookingInwards" class="form-control input-lg beingLog" autocomplete="off" type="text" rows="1" id=""  placeholder="What is it like being with this?"></textarea>
+                   <h6 class="pull-right guidance"> Click on any item to make it your new focus and dig in </h6>
+
+                   <br>
+                   <br>
+              </div>
+             </div>
+             <div class="col-sm-6 panel-area" >
+
+                <div>
+                    <h4 id="logTitle" class="inline-block pull-left">Log</h4>
+                    <span class="pull-right btn-link resetThis inline-block"> reset </span>
+                    <br>
+                </div>
+                <!-- create scrolling area for log -->
+                <div id="logArea"> 
+
+                <br>
+
+                <div id="log" class="">
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+
+
+    </body>

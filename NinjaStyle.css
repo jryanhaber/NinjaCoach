@@ -1,0 +1,1420 @@
+
+#title{
+
+  text-align: center !important;
+  padding: 1px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  margin: 1px;
+}
+
+.inline{
+
+}
+
+.2ndtitle{
+
+  margin-left: 10px;
+
+}
+
+.element{
+
+  
+}
+
+
+
+.badges{
+
+  margin-right: 9px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  top: 0px;
+  background-color: rgba(153, 153, 153, 0.75);
+}
+
+.mainSpacetitle{
+
+  font-size: 16px;
+  line-height: 1.1;
+}
+
+.hearingButtons{
+
+  line-height: 1.1;
+  padding: 6px;
+  font-size: 16px;
+}
+
+
+
+
+.menuSubtext{
+
+  font-size: 16px;
+  margin-top: 4px;
+}
+
+.hideCheckInArea{
+  height:inherit;
+
+
+}
+
+
+.glowing-border {
+    border: 2px solid #dadada;
+    border-radius: 7px;
+}
+
+.btn:focus { 
+    outline: thick;
+/*    border-color: #00FFAE;
+   box-shadow: 0 0 29px #00FFAE;   
+*/  border-color: white;
+    border: visible;
+    box-shadow: 0 0 50px white;
+}
+
+/* Item / Comment Formatting */
+
+.deleteThisLilDiv{
+  height:inherit;
+
+
+}
+
+/* Item / Aim / Trigger button Formatting */
+
+
+.clarifyYourAim{
+
+    height:inherit;
+
+}
+
+/* Item / Aim / Button Formatting */
+
+.aimButton{
+  width: 10vw;
+  margin-right: 5px;
+
+}
+
+.aimPanelBody{
+
+  margin:0px !important;
+  padding:1px !important;
+}
+
+.deleteThis{
+
+  height:inherit;
+}
+
+.honeIn2{
+
+  height: inherit;
+  margin-right: 5px;
+  width: 10vw;
+}
+
+.logItemButton{
+  
+    width: 10vw;
+
+}
+
+.aimDiv{
+
+line-height: 1.0!important;
+margin-top: 3px !important;
+
+}
+
+.aimField{
+
+width: 80vw !important;
+
+}
+
+
+.aimDiv{
+
+
+}
+
+.firstForm{
+
+font-size: 20px !important;
+
+}
+
+.firstTitle{
+
+font-size: 20px !important;
+
+}
+
+.commitmentDiv{
+
+line-height: 1.0!important;
+margin-top: 3px !important;
+  
+}
+
+
+.tinyHeader{
+
+  line-height: 20px;
+  display:block;
+}
+
+.journalItem{  /* need to truncate this to one line */
+
+
+}
+
+.editable {
+
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+.relatingText {
+  font-family: Avenir;
+font-size: 24px !important;
+margin-bottom: 10px !important;
+
+
+}
+
+.relatingText2 {
+  font-family: Avenir;
+margin-bottom: 10px !important;
+
+
+
+}
+
+.panel-body-header{
+font-size: 22px !important;
+
+
+}
+
+
+
+.integrityCheck{
+    width: 9vw;
+  overflow:hidden;
+  white-space: normal !important;
+  padding: 2px !important;
+line-height: 1.1 !important;
+font-size: 14px !important;
+
+height: inherit;
+
+}
+
+.integritySoulCheck{
+
+    width: 12vw;
+  overflow:hidden;
+  white-space: normal !important;
+  padding: 2px !important;
+line-height: 1.1 !important;
+height: inherit;
+font-size: 14px !important;
+
+
+}
+
+/*           
+============================*/
+
+.commitmentCheck{
+    width: 12vw;
+  overflow:hidden;
+  white-space: normal !important;
+  padding: 2px !important;
+line-height: 1.1 !important;
+font-size: 14px !important;
+height: inherit;
+
+}
+
+.priorityCheck{
+    width: 8vw;
+  overflow:hidden;
+  white-space: normal !important;
+  padding: 2px !important;
+line-height: 1.1 !important;
+height: inherit;
+font-size: 14px !important;
+
+
+}
+
+
+.integrityCheckUndefined{
+  background-image-opacity: 20;
+
+}
+
+.integrityCheckLow{
+
+
+}
+.integrityCheckModerate{
+
+
+}
+.integrityCheckHigh{
+
+
+}
+
+.integrityCheckVeryHigh{
+
+  
+}
+
+.commitmentCheckUndefined{
+  background-image-opacity: 20;
+
+}
+
+.commitmentCheckLow{
+
+
+}
+.commitmentCheckModerate{
+
+
+}
+.commitmentCheckHigh{
+
+
+}
+
+.commitmentCheckVeryHigh{
+
+  
+}
+
+
+
+
+
+.TodayItem{
+
+ 
+  
+}
+
+
+.todayButton{
+
+ 
+
+  
+}
+
+#titleMarker{
+
+/**/  margin-top: 0px;
+  font-size: 31px;
+}
+
+#headerBar{
+
+  margin: 2px;
+}
+
+
+
+.bt2{  /* This is a class for custom practice item styling */
+
+  text-align: left;
+  padding: 2px ;
+  margin: 0px !important;
+  border: 1px !important;
+}
+
+/*  */
+.bt2Checkin{ /* This is a class for check in entry styling */  
+font-size: 16px !important;
+  font-weight: 300 !important;
+
+  text-align: left;
+  padding: 2px !important;
+  margin: 0px !important;
+  border: 1px !important;
+}
+
+
+
+
+
+.bt3{
+
+  font-weight: 600;
+  text-align: left;
+  padding: 2px !important;
+  margin: 0px !important;
+  border: 1px !important;
+}
+
+
+.bt2Focused{
+/*    background-image: url("ninjaGraphics/backdrop9.png")!important;
+*/    background-color: rgba(208, 212, 216, 0.8);
+
+}
+
+.bt2CheckinFocused{
+    background-image: url("ninjaGraphics/backdrop9.png")!important;
+
+
+}
+
+.logItemTitleArea{
+
+  height: 65px;
+  overflow: hidden;
+}
+
+.titleMarker{
+
+  color: white;
+}
+
+
+.logItemTitle{
+
+  overflow: hidden;
+  height: 65px;
+  min-width: 40 vw;
+}
+
+.logItemEditor{
+
+
+}
+
+.inline{
+
+}
+
+
+.titleLogItemEditor{
+
+
+  max-width: 40vw !important;
+  overflow: show;
+
+}
+
+#modeBar{
+
+  overflow: hidden;
+}
+
+.aimField{
+
+  width: 90vw;
+}
+
+
+#newsPanel {
+font-family: Avenir, Century Gothic;
+font-size: 24px !important;
+margin-bottom: 1px !important;
+line-height: 1.44286;
+
+}
+
+#body{
+
+  padding-top: 2px;
+  background-color: #020202;
+  background-repeat: ;
+  background-size: 100% 1400%;
+}
+
+.p{
+
+/*    background-image: url("ninjaGraphics/backdrop8.jpg")!important;
+*/
+}
+
+
+.panel-body{
+
+/*  background-image: url("ninjaGraphics/backdrop8.jpg");
+*/  background-size:  cover;
+/*  border-radius: 5px;
+*/
+}
+
+.panel-body-header{
+
+/*  background-image: url("ninjaGraphics/backdrop8.jpg");
+*/  background-size:  cover;
+/*  border-radius: 5px;
+*/  padding: 7px;
+
+}
+
+
+
+.scrollDiv {
+    height:auto;
+    max-height:1400%;
+    overflow:auto;   
+}
+
+.panel {
+  background-color: rgba(255, 255, 255, 0.38);
+  margin-bottom: 2px;
+  border: none;
+  border-bottom: thin solid #F1F0F3;
+/*  border-radius: none !important;
+*/}
+
+.panel-body{
+
+/*  background-image: url("ninjaGraphics/backdrop8.jpg");
+*/  background-size:  cover;
+/*  border-radius: 5px;
+*/  padding: 10px;
+}
+
+.panel-body-pr{
+
+  background-image: url("ninjaGraphics/backdrop8.jpg");
+  background-size:  cover;
+/*  border-radius: 5px;
+*/  padding: 5px;
+}
+
+.btn-info {
+    background-repeat: repeat-x;
+    border-color: #28A4C9;
+}
+
+.btn-link {
+
+    color: #38363B;
+}
+
+
+.btn{
+
+}
+
+.menuButton{
+background-color: #418093;
+
+}
+
+
+.viewZone{
+
+  max-height: 50vh;
+  overflow-x: auto ;
+  overflow-y;   ;
+}
+
+.viewZoneButtons{
+
+  max-height: 90vh;overflow:auto !important;
+}
+
+.viewZoneMain2{
+
+  max-height: 90vh;overflow:auto !important;
+}
+
+.viewZoneMain{
+
+  max-height: 100vh;overflow:auto !important;
+}
+
+#myButtons{
+padding-left: 1px;
+margin-right: 1px;
+  
+}
+
+ .col{
+  margin-left: 5px;
+  margin-right: 5px;
+
+  
+ }
+
+
+
+ /*
+Set up access mode 
+ */
+
+.accessMode{
+
+  margin-right: 75px  !important;
+}
+
+
+ /*
+Default values for priority and integrity eval buttons
+ */
+
+
+ .priorityTrigger{
+display:none;
+
+ }
+
+ .integrityTrigger{
+display:none;
+
+ }
+
+#sidebar, #mainJournal{  /* Primary class for all panel modules (resizing) */
+
+  resize: ;
+    overflow: scroll;
+    padding-right: 1px ;
+}
+
+#introb{
+
+}
+
+.btn-primary{
+
+  background-color: #2C6596 ;
+}
+
+.btn-primary:hover{
+
+  background-color: #3F76A5 ;
+}
+
+.btn-info{
+
+background-color: #1E91B3 ;
+border-color: #2A819B ;
+}
+
+
+.btn-info:hover{
+
+background-color: rgba(30, 145, 179, 0.91) ;
+}
+
+.mainButtons{
+
+border: none;
+
+
+}
+
+#jumbo2{
+
+  padding-top: 20px;
+  padding: 20px;
+  padding-right: 30px;
+  margin-top: 10px;
+  background-image: url("ninjaGraphics/backdrop8.jpg")!important;
+
+}
+
+.checkbox-lg2 {
+
+width: 20px;
+height: 20px;
+margin: 3px 8px 0px -7px !important;
+}
+
+.buttonItem{
+  display:inline;
+  white-space: normal !important;
+
+}
+
+.checkbox-lg
+
+{
+
+width:30px;
+
+height:30px;
+margin: 5px 18px 2px !important;
+}
+
+.readOnly{
+
+background: transparent;
+
+}
+
+.jumbo4{
+  padding-top: 20px;
+  padding: 20px;
+  padding-right: 30px;
+  margin-top: 10px;
+}
+
+p {
+
+line-height: 110%;
+margin: 1px 0px 10px;  }
+
+
+.p2 {
+
+  line-height: 100%;
+  margin: 1px 1px 2px;  
+};
+
+  .btn-default { 
+    font-size: 16px;
+    word-wrap: break-word;
+    white-space: normal;
+  };
+
+.checkInArea{
+
+      white-space: normal;
+      display:none;
+
+
+}
+
+.checkInButton{
+  display:block;
+}
+
+.saveLogs{
+
+  max-width:100vw;
+}
+
+}
+
+#jumbo3{  
+/*  background-image: url("ninjaGraphics/button4.png")!important;
+*/  font-size: 16px !important;
+  padding-top: 25px;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+}
+
+#mainrow{
+  padding-top: 10px;
+}
+
+
+
+.jumbotron{
+
+
+  background-color: ;
+/*  background-image: url("ninjaGraphics/backdrop8.jpg")!important;
+*/  background-size:  cover;
+/*  border-radius: 5px ;
+*/  padding-right: 5px !important;
+  padding-left: 5px !important;
+  padding: 2px !important;
+  margin: 2px !important;
+  font-size: 16px !important;
+
+}
+
+.row{
+
+  margin-right: 1px !important;
+margin-left: 1px !important;
+}
+
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+
+   padding-right: 0px !important;
+  padding-left: 0px !important;
+}
+
+#sidebar .nm .container .container-fluid{
+
+
+  padding-right: 1px !important;
+  padding-left: 1px !important;
+
+}
+
+.container-fluid{
+
+  padding-right: 1px;
+  padding-left: 1px;
+}
+
+
+.jumbotron:p{   font-weight:  800;
+};
+
+#buttonpanel{
+
+
+}
+
+#buttonpanel1{
+
+
+  }
+.btn {
+
+  white-space: normal;
+}
+
+
+
+
+
+#thirdPersonComment 
+{
+
+font-weight: 400;
+text-align: right;
+margin-left: 2cm;
+margin-right: .5cm ;
+color: white;  
+ margin-top: 2px;
+      margin-bottom:2px;
+position: relative;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  background: #134842;
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+}
+
+
+
+#myComment{
+
+  position: relative;
+  font-weight: 400;
+  text-align: left;
+  color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  margin-right: 2cm;
+  margin-left: .5cm;
+  margin-top: 2px;
+  margin-bottom:2px;
+  background: #1F5A8D;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
+#myComment:after 
+{
+  
+
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 8px 14px 8px 0;
+border-color: transparent #1F5A8D;
+display: block;
+width: 0;
+z-index: 1;
+margin-top: -8px;
+left: -11px;
+top: 53%;
+
+
+}
+
+.jumbotron p {
+    margin-bottom: 1px;
+    font-size: 18px;
+    font-weight: 400;
+
+  }
+
+
+#newConversationTitle{
+
+  font-weight: 400 ;
+  text-align: center;
+  text-indent: ;
+   color: ;
+  padding-left: 10px;
+  padding-right: 10px;
+   padding-top: 4px;
+  padding-bottom: 4px;
+    background: ;
+  border-radius: ;}
+
+#secondPersonComment{
+
+  font-weight:  400;
+  text-align: center;
+  margin-right: 2cm;
+  margin-left: 2cm;
+   margin-top: 2px;
+  margin-bottom:2px;
+  text-indent: ;
+   color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+    background: #90B6A5;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
+
+#thirdPersonComment:after 
+{
+ 
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 8px 0 8px 14px;
+border-color: transparent #134842;
+display: block;
+width: 0;
+z-index: 1;
+margin-top: -8px;
+right: -11px;
+top: 53%;
+
+}
+
+.logItemListView{
+
+  line-height: 120%;
+  font-family: Avenir;
+  font-size: 16px !important;
+  font-weight: 600;
+  text-align: left;
+  padding: 0px !important;
+  margin: 6px;
+  border: 1px none !important;    
+  overflow:hidden;
+
+}
+
+
+
+/* Main menu page stylings
+==========================================================*/
+.main-menu-div{
+  font-family: Avenir;
+  font-size: 40px;
+  font-weight: 600;
+  padding: 40px ;
+
+}
+
+
+
+/* Styling for coaching methodologies
+==========================================================*/
+
+
+.accessGuidance{
+
+  font-size: 16px;
+  font-weight: bold;
+  padding: 7px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  line-height: 1.3;
+}
+
+
+/* Styling for experiementing with gradient sliders  - 
+- not in use currently
+==========================================================*/
+
+#rangevalue{
+  font-size: 24px;
+  font-style: bold;
+  text-align: right;
+}
+
+.rangeValue{
+  font-size: 24px;
+  font-style: bold;
+  text-align: right;
+}
+
+
+
+.introFormat{
+
+  
+}
+
+
+
+
+.logItem2{
+
+  line-height: 1.1;
+  padding: 0px !important;
+  border-bottom:  thin solid lightgrey !important;
+}
+
+
+input[type="range"] {
+    border-radius: 15px;
+    box-shadow: 11px 5px 21px #5D3434 inset;
+    background-color: #5E6FAD;
+    height: 23px;
+    vertical-align: middle;
+
+
+
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+border-radius: 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+box-shadow: 0px 3px 19px #C2FF5E inset;
+height: 23px;
+background-color: #0B1E65;
+margin: 3px 0px 0px;
+    margin-top: 3px;
+    margin-right-value: 0px;
+    margin-bottom: 0px;
+    margin-left-value: 0px;
+    margin-left-ltr-source: physical;
+    margin-left-rtl-source: physical;
+    margin-right-ltr-source: physical;
+    margin-right-rtl-source: physical;
+padding: 0px;
+    padding-top: 0px;
+    padding-right-value: 0px;
+    padding-bottom: 0px;
+    padding-left-value: 0px;
+    padding-left-ltr-source: physical;
+    padding-left-rtl-source: physical;
+    padding-right-ltr-source: physical;
+    padding-right-rtl-source: physical;
+position: relative;
+vertical-align: middle;
+overflow-x: hidden;
+overflow-y: visible;
+width: 100%;
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  position: relative;
+  pointer-events:none;
+  width: 8px;
+  height: 100%;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  background: #757575; 
+  height: 8px;
+  margin:15px 0;
+
+}
+input[type=range]::-webkit-slider-thumb:before {
+  content:"-";
+  font-style: 0;
+  line-height:0;
+  position: absolute;
+  left:-3000px;
+  right:0;
+  top:0;
+  bottom:0;
+  background: #cc181e;
+}
+input[type=range]::-webkit-slider-thumb:after {
+  content: "";
+  position: absolute;
+  left:-4px;
+  right:-4px;
+  top:-4px;
+  bottom:-4px;
+  background: #adadad;
+  border-radius: 50%;
+  border:15px solid #e8e8e8;
+  z-index: 10;
+}
+input[type=range]:focus {
+  outline:none;
+}
+input[type=range]:hover::-webkit-slider-thumb:after,
+input[type=range]:focus::-webkit-slider-thumb:after {
+  background: #cc181e;
+}
+input[type=range]:disabled::-webkit-slider-thumb:before {
+  background-color: #a1151a;
+}
+input[type=range]:disabled::-webkit-slider-thumb:after {
+  background: #adadad !important;
+}
+
+
+
+#title2ndPersonArea{
+
+  font-size: 20px;
+  
+}
+
+.popup{ 
+    background-color:#fff;
+    border-radius:15px;
+    color:#000;
+    display:none; 
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+
+
+
+.btn-sm{
+font-size: 14px;
+
+}
+
+.input-sm{
+font-size: 16px;
+
+}
+
+.experienceMenuButton{
+
+
+}
+
+
+.experienceMenuItem{
+
+
+}
+
+
+
+
+.shadowMenuButton, .hearingButtons, .menuButtonSupplemental{
+
+  line-height: 1.4;
+  padding: 6px;
+  font-size: 16px;
+  font-family: Avenir;
+  color:white;
+  border-radius: 0;
+/*  border-bottom: thin solid #444247;
+*//*  border-color: transparent;
+
+*/}
+
+
+.shadowMenuButton, .menuButtonSupplemental, .mainButtons{
+
+
+  border-radius:0px;
+  background-color: rgba(54, 53, 56, 1);
+
+}
+
+/*create the blurred sidebar effect*/
+#sidebarShadow{
+
+
+    border-radius:0px;
+    background-color: rgba(255, 255, 255, 1);
+    
+    background-image: url("ninjaGraphics/backdrop8.jpg");
+
+/*    filter:blur(5px);
+*/
+}
+
+.hearingButtons, .experienceMenuItems{
+
+
+  background-color: #4A484E;
+  border-color: transparent;
+ 
+
+}
+
+
+
+.shadowMenuButton:hover, .hearingButtons:hover, .menuButtonSupplemental:hover, .experienceMenuItems:hover{
+
+  color:white;
+  text-decoration: none;
+  border-color: transparent;
+
+/*  
+*/}
+
+.menuButtonSupplemental{
+      margin-top: 0px !important;
+
+
+}
+
+.menuButtonSupplemental:hover{
+      margin-top: 0px !important;
+
+
+}
+
+.shadowMenuButton:hover, .menuButtonSupplemental:hover, .mainButtons:hover{
+
+ 
+  background-color: #3D3C3F;
+
+}
+
+.hearingButtons:hover, .experienceMenuItems:hover{
+
+ 
+  background-color: #504F56;
+
+}
+
+
+.shadowHeader{
+
+/*    border-bottom: thin solid #444247;
+*/
+}
+
+.labelItem{
+
+  background-color: #363538;
+  color: rgba(198, 198, 198, 0.8);
+  border-bottom: thin solid #444247;
+  font-weight: bold;
+  border-radius: 0px;
+}
+
+.labelItem:hover{
+
+  background-color: #363538;
+  color: rgba(198, 198, 198, 0.8);
+
+}
+
+
+
+.btn{
+
+}
+
+
+.experienceMenuItems{
+
+  border-top-right-radius: 0px;
+  color: white;
+
+
+}
+
+.experienceMenuItems:active, .allMainMenus:active{
+
+  border-top-right-radius: 0px;
+  background-color: #504F56;
+
+}
+
+/* reset all of the button fonts to apples newest fav font */
+
+button{
+
+    font-family: Avenir;
+
+}
+
+/* set the new color for the submenu items*/
+
+.btn-subMenu{
+  background-color: #504F56;
+    color:white;
+
+}
+
+/* set the text color for the main buttons*/
+
+.mainButtons{
+
+  color: white;
+}
+
+/* set up the glow for the overarching menu buttons*/
+
+.btn-subMenu:hover{
+    color:white;
+    border: thin;
+
+/*    border-color: rgba(178, 203, 220, .5);
+*/    border-color: rgba(255, 255, 255, .5);
+/*    box-shadow: 0px 0px 20px rgba(111, 158, 190, 1);
+*/    box-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+}
+
+
+
+/* sets the hover style for the overarching menu buttons*/
+.mainButtons:hover{
+
+  color:white;
+}
+
+/* this sets the sidebar to a descent max width but impacts too many other things... to be 
+further addressed later */
+#sidebar{
+
+/*  max-width: 310px
+*/}
+
+.aimDiv{
+
+  background-image: none;
+  background-color: rgba(255, 255, 255, .15);
+}
+
+.logItemDeleteButton{
+
+  margin-right: 16px;
+}
+
+
+
+.btn-default{
+  background-color: rgba(255, 255, 255, 0.87) ;
+ border-color: transparent;
+}
+
+
+.btn-default:hover{
+  background-color:  rgba(255, 255, 255, 1);
+ border-color: transparent;
+}
+
+
+
+
+
+
+.btn-danger{
+ 
+ background-color: rgba(96, 92, 125, 1);
+ border-color: transparent;
+}
+
+
+
+.btn-danger:hover, .btn-danger:focus{
+ 
+ background-color:rgba(96, 92, 125, .8);
+ border-color: transparent;
+}
+
+/*color schemes*/
+.btn-warning{
+ 
+ background-color: #447196;
+ border-color: transparent;
+}
+
+
+.btn-warning:hover , .btn-warning:focus{
+ 
+ background-color: rgba(68, 113, 150, 0.81);
+ border-color: transparent;
+}
+
+
+.btn-info{
+
+background-color:  rgba(42, 103, 153, 1);
+ border-color: transparent;
+
+}
+
+
+.btn-info:hover, .btn-info:focus{
+
+background-color:  rgba(42, 103, 153, 0.83);
+ border-color: transparent;
+
+}
+
+.btn-primary{
+background-color:  rgba(15, 79, 132, 0.8);
+ border-color: transparent;
+}
+
+
+
+.btn-primary:hover, .btn-primary:focus{
+background-color:  rgba(15, 79, 132, 1);
+ border-color: transparent;
+
+}
+
+.openingContent{
+
+color: grey;
+
+}
+
+.btn-success{
+
+background-color: rgba(5, 56, 98, 1);
+ border-color: transparent;
+
+}
+
+
+.btn-success:hover , .btn-success:focus{
+
+background-color: rgba(5, 56, 98, 0.9);
+ border-color: transparent;
+
+}
+
+.logModalArea{
+  height: 100%;
+  width:100%;
+
+
+}
+
