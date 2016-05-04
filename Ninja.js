@@ -3328,6 +3328,17 @@ var addCoachMeOnThisButton = function(where){
 
 
 
+/*
+
+tr - table row 
+Td - text area for the name 1/3
+Td - intent area for who I must be 1/3
+Td - check in area 1/3
+/tr
+Tr - for the rest of the active check in area
+/tr
+
+*/
         // Title Area
         // ============ //
          // create the p container for the title and put it on the main div 
